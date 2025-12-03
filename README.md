@@ -1,4 +1,4 @@
-# Hair Loss Education Project
+# Qoves interview task
 
 This is a take-home interview project focused on creating educational content about hair loss and male pattern baldness.
 
