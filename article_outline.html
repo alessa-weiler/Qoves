@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Male Pattern Baldness: An Evidence-Based Guide to Hair Loss Options</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=PP+Neue+Montreal:wght@400;500;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,10 +14,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: "ppNeueMontreal", "ppNeueMontreal Fallback", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.65;
-            color: #2c3e50;
-            background: #fafbfc;
+            color: #233137;
+            background: #fff;
         }
 
         .container {
@@ -26,8 +28,8 @@
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #cddbe1 0%, #b8c7ce 100%);
+            color: #233137;
             padding: 60px 20px;
             text-align: center;
             margin-bottom: 60px;
@@ -37,6 +39,8 @@
             font-size: 2.5em;
             margin-bottom: 15px;
             font-weight: 700;
+            color: #233137;
+            font-family: "f37Zagma", "f37Zagma Fallback", serif;
         }
 
         header p {
@@ -44,28 +48,33 @@
             opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
+            color: #758085;
         }
 
         .article-meta {
             font-size: 0.9em;
             opacity: 0.85;
             margin-top: 20px;
+            color: #758085;
         }
 
         /* Quick FAQ - Above the Fold */
         .quick-faq {
-            background: white;
-            border-left: 5px solid #667eea;
+            background: #fff;
+            border-left: 5px solid #cddbe1;
             padding: 40px;
             margin: 60px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.08);
         }
 
         .quick-faq h2 {
             font-size: 1.6em;
             margin-bottom: 30px;
-            color: #2c3e50;
+            color: #233137;
+            font-family: "f37Zagma", "f37Zagma Fallback", serif;
+            border: none;
+            padding: 0;
         }
 
         .faq-list {
@@ -74,21 +83,21 @@
         }
 
         .faq-item {
-            background: #f8f9fa;
+            background: #f9fafb;
             padding: 15px 20px;
             border-radius: 6px;
-            border-left: 3px solid #667eea;
+            border-left: 3px solid #cddbe1;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .faq-item:hover {
-            background: #eef2ff;
+            background: #f0f3f4;
             transform: translateX(5px);
         }
 
         .faq-item a {
-            color: #667eea;
+            color: #cddbe1;
             text-decoration: none;
             font-weight: 600;
         }
@@ -105,46 +114,49 @@
         h2 {
             font-size: 2em;
             margin-bottom: 30px;
-            color: #2c3e50;
+            color: #233137;
             padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 2px solid #cddbe1;
+            font-family: "f37Zagma", "f37Zagma Fallback", serif;
         }
 
         h3 {
             font-size: 1.4em;
             margin: 35px 0 20px 0;
-            color: #2c3e50;
+            color: #233137;
+            font-family: "f37Zagma", "f37Zagma Fallback", serif;
         }
 
         h4 {
             font-size: 1.1em;
             margin: 25px 0 15px 0;
-            color: #3d5a80;
+            color: #758085;
             font-weight: 600;
         }
 
         p {
             margin-bottom: 20px;
             line-height: 1.75;
+            color: #233137;
         }
 
         /* Visual Elements */
         .visual-block {
-            background: white;
+            background: #fff;
             border-radius: 8px;
             padding: 30px;
             margin: 40px 0;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #cddbe1;
+            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.06);
         }
 
         .visual-block h4 {
             margin-top: 0;
-            color: #667eea;
+            color: #758085;
         }
 
         .placeholder-image {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            background: linear-gradient(135deg, #cddbe115 0%, #b8c7ce15 100%);
             width: 100%;
             height: 350px;
             border-radius: 6px;
@@ -152,15 +164,15 @@
             align-items: center;
             justify-content: center;
             font-size: 1.1em;
-            color: #667eea;
+            color: #758085;
             font-weight: 600;
-            border: 2px dashed #667eea;
+            border: 2px dashed #cddbe1;
             margin: 20px 0;
         }
 
         .image-caption {
             font-size: 0.9em;
-            color: #666;
+            color: #758085;
             font-style: italic;
             margin-top: 10px;
             text-align: center;
@@ -171,15 +183,15 @@
             width: 100%;
             border-collapse: collapse;
             margin: 30px 0;
-            background: white;
+            background: #fff;
             border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.06);
         }
 
         .comparison-table th {
-            background: #667eea;
-            color: white;
+            background: #cddbe1;
+            color: #233137;
             padding: 18px;
             text-align: left;
             font-weight: 600;
@@ -187,7 +199,8 @@
 
         .comparison-table td {
             padding: 16px 18px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #e8ebed;
+            color: #233137;
         }
 
         .comparison-table tr:last-child td {
@@ -200,21 +213,21 @@
 
         /* Key Points Box */
         .key-point {
-            background: #f0f7ff;
-            border-left: 4px solid #667eea;
+            background: #f0f3f4;
+            border-left: 4px solid #cddbe1;
             padding: 20px;
             margin: 25px 0;
             border-radius: 4px;
         }
 
         .key-point strong {
-            color: #667eea;
+            color: #233137;
         }
 
         /* Evidence Box */
         .evidence-box {
-            background: #f9f7ff;
-            border-left: 4px solid #764ba2;
+            background: #f7f8fa;
+            border-left: 4px solid #758085;
             padding: 20px;
             margin: 25px 0;
             border-radius: 4px;
@@ -222,6 +235,7 @@
 
         .evidence-box p {
             margin-bottom: 10px;
+            color: #233137;
         }
 
         /* Timeline */
@@ -233,7 +247,7 @@
         .timeline-item {
             margin-left: 30px;
             padding-bottom: 30px;
-            border-left: 2px solid #667eea;
+            border-left: 2px solid #cddbe1;
             position: relative;
         }
 
@@ -248,33 +262,35 @@
             top: 0;
             width: 12px;
             height: 12px;
-            background: #667eea;
+            background: #cddbe1;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 3px solid #fff;
         }
 
         .timeline-item h4 {
             margin-top: 0;
+            color: #758085;
         }
 
         /* Protocol Box */
         .protocol-box {
-            background: white;
-            border: 2px solid #667eea;
+            background: #fff;
+            border: 2px solid #cddbe1;
             border-radius: 8px;
             padding: 30px;
             margin: 40px 0;
         }
 
         .protocol-box h4 {
-            color: #667eea;
+            color: #758085;
             margin-top: 0;
         }
 
         .protocol-step {
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #e8ebed;
+            color: #233137;
         }
 
         .protocol-step:last-child {
@@ -286,11 +302,13 @@
         /* List Styling */
         ul, ol {
             margin: 20px 0 20px 20px;
+            color: #233137;
         }
 
         li {
             margin-bottom: 12px;
             line-height: 1.7;
+            color: #233137;
         }
 
         /* Cards Grid */
@@ -302,31 +320,32 @@
         }
 
         .card {
-            background: white;
+            background: #fff;
             padding: 25px;
             border-radius: 8px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #cddbe1;
             transition: all 0.3s ease;
         }
 
         .card:hover {
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 8px 24px rgba(205, 219, 225, 0.3);
             transform: translateY(-5px);
         }
 
         .card h4 {
             margin-top: 0;
-            color: #667eea;
+            color: #758085;
         }
 
         .card p {
             margin-bottom: 0;
+            color: #233137;
         }
 
         /* Treatment Ranking */
         .ranking-item {
-            background: white;
-            border-left: 4px solid #667eea;
+            background: #fff;
+            border-left: 4px solid #cddbe1;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 4px;
@@ -334,8 +353,8 @@
 
         .ranking-number {
             display: inline-block;
-            background: #667eea;
-            color: white;
+            background: #cddbe1;
+            color: #233137;
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -354,25 +373,34 @@
 
         .ranking-content h4 {
             margin: 0 0 8px 0;
+            color: #758085;
+        }
+
+        .ranking-content p {
+            color: #233137;
         }
 
         /* Callout */
         .callout {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border: 2px solid #667eea;
+            background: linear-gradient(135deg, #cddbe115 0%, #b8c7ce15 100%);
+            border: 2px solid #cddbe1;
             padding: 25px;
             border-radius: 8px;
             margin: 40px 0;
         }
 
         .callout strong {
-            color: #667eea;
+            color: #233137;
+        }
+
+        .callout p {
+            color: #233137;
         }
 
         /* Footer */
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #233137;
+            color: #fff;
             padding: 40px 20px;
             margin-top: 100px;
             text-align: center;
@@ -407,18 +435,20 @@
 
         /* Disclaimer */
         .disclaimer {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: #f9f8f0;
+            border-left: 4px solid #cddbe1;
             padding: 15px;
             margin: 30px 0;
             border-radius: 4px;
             font-size: 0.95em;
+            color: #233137;
         }
 
         .highlight {
-            background: #fff3cd;
+            background: #cddbe1;
             padding: 2px 6px;
             border-radius: 3px;
+            color: #233137;
         }
     </style>
 </head>
@@ -436,7 +466,7 @@
 
     <!-- INTRODUCTION -->
     <section>
-        <p style="font-size: 1.15em; line-height: 1.85; color: #333;">By 40, <strong>50% of men</strong> show some degree of male pattern baldness—yet most delay treatment until they've lost years of opportunity to intervene. If you're reading this, you're probably asking whether it's worth starting now, whether the meds will wreck your sex life, and whether you're staring down a $10,000 hair transplant or need to accept the buzz cut. The good news: the science has evolved, and a combination of cheap, well-established drugs plus some thoughtful additions can halt recession and modestly improve density even at 45, 50, or beyond. But you need to know what actually works, what's marketing, and when to stop fighting and shave. This guide cuts through the noise and gives you the evidence-based answer: what to do, why it works, what it costs, and what to realistically expect in the next 12 months.</p>
+        <p style="font-size: 1.15em; line-height: 1.85; color: #233137;">By 40, <strong>50% of men</strong> show some degree of male pattern baldness—yet most delay treatment until they've lost years of opportunity to intervene. If you're reading this, you're probably asking whether it's worth starting now, whether the meds will wreck your sex life, and whether you're staring down a $10,000 hair transplant or need to accept the buzz cut. The good news: the science has evolved, and a combination of cheap, well-established drugs plus some thoughtful additions can halt recession and modestly improve density even at 45, 50, or beyond. But you need to know what actually works, what's marketing, and when to stop fighting and shave. This guide cuts through the noise and gives you the evidence-based answer: what to do, why it works, what it costs, and what to realistically expect in the next 12 months.</p>
     </section>
 
     <!-- QUICK FAQ - ABOVE THE FOLD -->
@@ -572,23 +602,6 @@
         <div class="evidence-box">
             <p><strong>Evidence:</strong> Long-term studies of finasteride (the most-studied drug for hair loss) show that men starting at 45 with Norwood 3 achieve an average 11–15% increase in hair count over 12 months and maintain it for decades, as long as they continue treatment. Regret is rare in this group.</p>
         </div>
-
-        <h3>Why You're Not "Too Late" But Also Not Going Back to 20</h3>
-        <p>Medical therapy (finasteride, minoxidil, tretinoin, microneedling) works best on <strong>miniaturized</strong> follicles—hairs that are thin and short but still present. It does not resurrect completely dead follicles. This is the key difference:</p>
-        <ul>
-            <li><strong>Miniaturized (recoverable):</strong> Fine, thin hairs present at the hairline or crown; medication can thicken and lengthen them</li>
-            <li><strong>Destroyed (not recoverable):</strong> Completely absent follicles, often with scarring; medication won't help</li>
-        </ul>
-        <p>At Norwood 3, most of your follicles are miniaturized, not destroyed. That's why treatment works. At Norwood 6-7, most are destroyed, which is why treatment has a lower ceiling.</p>
-
-        <div class="visual-block">
-            <h4>Miniaturized vs. Destroyed Follicles</h4>
-            <div class="placeholder-image">
-                [Cross-section diagram: healthy hair follicle vs. miniaturized follicle (smaller, DHT-affected) vs. destroyed follicle (completely absent, scarred)] 
-                [Label key features: dermal papilla size, hair shaft thickness, DHT receptor activity]
-            </div>
-            <p class="image-caption">Medication can restore miniaturized follicles to terminal (full-size) hairs. It cannot resurrect destroyed follicles. The goal of early intervention is to catch loss before irreversible damage occurs.</p>
-        </div>
     </section>
 
     <!-- SECTION 3: WHAT WORKS -->
@@ -610,13 +623,6 @@
             </div>
         </div>
 
-        <div class="visual-block">
-            <div class="placeholder-image">
-                [Graph: Hair count trajectory over 12 months | Show finasteride vs. placebo | Y-axis: hair count change (%) | X-axis: months 0-12 | Finasteride curve rises gradually; placebo stays flat or declines]
-            </div>
-            <p class="image-caption">Finasteride consistently increases hair count over 12 months. The effect plateaus around month 9-12. Source: Propecia clinical trials, 2013 meta-analysis</p>
-        </div>
-
         <div class="ranking-item">
             <span class="ranking-number">2</span>
             <div class="ranking-content">
@@ -626,15 +632,6 @@
                 <p><strong>Efficacy (if you respond):</strong> 30–40% density increase</p>
                 <p><strong>Cost:</strong> $15–50/month</p>
             </div>
-        </div>
-
-        <div class="visual-block">
-            <h4>Why 40% of Men Don't Respond to Minoxidil (The Enzyme Bottleneck)</h4>
-            <div class="placeholder-image">
-                [Flow diagram: Minoxidil enters follicle → requires SULT1A1 enzyme → converts to active minoxidil sulfate → opens potassium channels → anagen prolongation] 
-                [Split diagram: "Responder (enzyme activity high)" vs. "Non-responder (enzyme activity low)" | Show same minoxidil amount entering; one converts well, one doesn't]
-            </div>
-            <p class="image-caption">Minoxidil is a prodrug—it must be activated by an enzyme. If you lack sufficient enzyme activity, minoxidil remains inactive. This isn't effort or compliance; it's genetics.</p>
         </div>
 
         <div class="ranking-item">
@@ -658,15 +655,6 @@
                 <p><strong>Cost:</strong> $0–300/session depending on at-home vs. professional</p>
                 <p><strong>Depth matters:</strong> 0.5mm is suboptimal; 0.6–1.0mm is evidence-based</p>
             </div>
-        </div>
-
-        <div class="visual-block">
-            <h4>Microneedling Depth Guide (Why Depth Matters)</h4>
-            <div class="placeholder-image">
-                [Cross-section of scalp showing three needle depths | 0.5mm: barely into epidermis, minimal effect | 0.6–0.8mm: optimal, reaches dermal papilla zone | 1.0mm: adequate but approaching scarring risk] 
-                [Use color coding: green for optimal, yellow for suboptimal, red for risky]
-            </div>
-            <p class="image-caption">Microneedling depth directly correlates with drug penetration and follicle stimulation. 0.6–1.0mm balances efficacy and safety. Deeper is not better.</p>
         </div>
 
         <div class="ranking-item">
@@ -706,7 +694,7 @@
                         <td>94%</td>
                         <td>+11–15 hairs/cm²</td>
                     </tr>
-                    <tr style="background: #f0f7ff;">
+                    <tr style="background: #f0f3f4;">
                         <td><strong>Finasteride + Minoxidil + Tretinoin + Microneedling</strong></td>
                         <td><strong>94%+</strong></td>
                         <td><strong>+15–25 hairs/cm²</strong></td>
@@ -793,13 +781,6 @@
                 <li><strong>Exit strategy:</strong> If you're experiencing a confirmed side effect after 6 months and it's affecting your quality of life, stop. Your sexual function will almost certainly return within weeks-months.</li>
             </ul>
         </div>
-
-        <h3>Dutasteride vs. Finasteride: Side Effect Comparison</h3>
-        <p><strong>Counterintuitively, dutasteride (which is stronger) has lower reported ED incidence than finasteride in head-to-head trials (4.6% vs. 2–4%)</strong>, though it has a broader side effect profile. If finasteride causes side effects, dutasteride often doesn't—and vice versa.</p>
-
-        <div class="callout">
-            <p><strong>Bottom line on sexual side effects:</strong> If you're 35–55 and healthy, the risk is real but low (5–10%), reversible in 90%+ of cases, and the benefit of halting hair loss often outweighs the risk. But it's a legitimate concern to discuss with your doctor. Start conservatively, monitor for 3–6 months, and have an exit strategy if needed.</p>
-        </div>
     </section>
 
     <!-- SECTION 5: FOREVER -->
@@ -829,14 +810,6 @@
             </div>
         </div>
 
-        <div class="visual-block">
-            <h4>Hair Count Trajectory: On Treatment vs. Off Treatment</h4>
-            <div class="placeholder-image">
-                [Line graph | X-axis: months 0-24 | Y-axis: hair count (absolute) | Show two lines: "On finasteride" (rises gradually months 0-12, then plateaus) vs. "Stops finasteride at month 12" (rises months 0-12, then declines back to baseline by month 18–24)]
-            </div>
-            <p class="image-caption">Treatment creates a "new normal" as long as you stay on it. Stopping reverses the gains within 3–6 months.</p>
-        </div>
-
         <h3>Why This Happens: The Genetics Don't Change</h3>
         <p>Finasteride blocks DHT synthesis; minoxidil prolongs anagen; tretinoin upregulates enzymes. But none of these change your underlying genetic susceptibility to hair loss. They're interventions that require constant application to maintain their effect. Once you stop, your follicles revert to their natural state: miniaturized and short-cycled.</p>
 
@@ -844,7 +817,7 @@
             <strong>This is not a failure of the treatment.</strong> It's a reflection of how biology works. Your genes are constant; the medications counteract them. Stop the countermeasure, and the original problem returns.
         </div>
 
-        <h3>The Cost-Benefit Calculation</h3>
+        <h3>Cost-Benefit Calculation</h3>
         <table class="comparison-table">
             <thead>
                 <tr>
@@ -879,22 +852,6 @@
         <div class="callout">
             <p><strong>Real talk:</strong> Finasteride is $10–30/month. That's the price of a coffee per day. Over 30 years, that's $3,600–10,800—less than a single transplant. The question isn't whether you can afford it; it's whether the psychological burden of "being on medication" is worth the benefit of halted loss and density improvement.</p>
         </div>
-
-        <h3>Can You Take Breaks?</h3>
-        <p><strong>No.</strong> Temporary cessation = temporary regrowth loss. You'd be starting from scratch, psychologically and biologically, each time you restart. This isn't a strategy; it's a way to waste money and time.</p>
-
-        <h3>Is There a "Natural" Alternative That Works Long-Term?</h3>
-        <p><strong>No.</strong> Finasteride works because it blocks DHT synthesis at the enzymatic level. Minoxidil works because it pharmacologically prolongs anagen. Tretinoin works because it upregulates enzymes. No herbal equivalent has RCT evidence for sustained hair growth over years. If it did, it would be a drug, not a supplement.</p>
-
-        <h3>Cost Optimization</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Generic finasteride:</strong> $10–20/month (cheapest option)</li>
-                <li><strong>GoodRx or Mark Cuban Cost Plus Drugs:</strong> Can reduce cost further; shop around</li>
-                <li><strong>Insurance coverage:</strong> Varies; finasteride is sometimes covered for prostate issues, off-label for hair (check your plan)</li>
-                <li><strong>Minoxidil:</strong> OTC and cheap; often <$30/month for generic topical</li>
-            </ul>
-        </div>
     </section>
 
     <!-- SECTION 6: TRANSPLANT -->
@@ -906,73 +863,6 @@
         <h3>Before You Even Consider Surgery: The Golden Rule</h3>
         <div class="callout">
             <p><strong>Stabilize your loss first (minimum 6–12 months on finasteride ± minoxidil) before any transplant.</strong> A transplant at Norwood 3 that keeps receding looks progressively worse. You need to know your "final" loss pattern before you graft hair into it.</p>
-        </div>
-
-        <div class="visual-block">
-            <h4>The Regret Pattern: Transplant Without Stabilization vs. With Stabilization</h4>
-            <div class="placeholder-image">
-                [Before/after comparison | LEFT: Man who transplanted at Norwood 3 without finasteride; now Norwood 4–5 with awkward graft pattern (dense transplanted area surrounded by receded non-transplanted hair) | RIGHT: Man who stabilized on finasteride for 12 months, then transplanted; now Norwood 2 appearance with natural-looking, cohesive density]
-            </div>
-            <p class="image-caption">Stabilizing loss first prevents the "dense patch surrounded by recession" look that characterizes transplant regret.</p>
-        </div>
-
-        <h3>Red Flags: Surgeons to Avoid</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li>❌ <strong>Marketing-heavy:</strong> "Guaranteed results," promise of full restoration</li>
-                <li>❌ <strong>Lowest price in region:</strong> Often correlates with poor technique, overcrowding, poor design</li>
-                <li>❌ <strong>Willing to transplant >3,000 grafts in single session:</strong> Over-harvesting damages donor supply</li>
-                <li>❌ <strong>No before/afters from men with your Norwood stage:</strong> Vague or hand-wavy results</li>
-                <li>❌ <strong>Won't discuss ongoing medical therapy:</strong> Doesn't understand that transplant alone is insufficient</li>
-                <li>❌ <strong>Emphasis on FUE over design:</strong> Extraction technique matters less than hairline design</li>
-            </ul>
-        </div>
-
-        <h3>Green Flags: What to Look For</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li>✅ <strong>Conservative approach to graft count:</strong> Won't over-harvest; discusses limits of donor supply</li>
-                <li>✅ <strong>Emphasis on hairline design:</strong> Shows detailed pre-op drawings; discusses natural angles</li>
-                <li>✅ <strong>Honest about limits:</strong> "You'll look better but not 25 again"</li>
-                <li>✅ <strong>Requires pre-transplant medical therapy:</strong> Won't operate on men not on finasteride</li>
-                <li>✅ <strong>Real before/afters:</strong> Multiple cases at your Norwood stage, 12+ months post-op</li>
-                <li>✅ <strong>Available for revision:</strong> Acknowledges that some men need touch-ups</li>
-            </ul>
-        </div>
-
-        <h3>The Numbers: Cost, Timeline, Realistic Results</h3>
-        <ul>
-            <li><strong>Cost:</strong> $8,000–15,000 for typical Norwood 3 (2,000–3,000 grafts)</li>
-            <li><strong>Density match:</strong> Transplanted hair will never achieve 100% original density; 70–80% match is realistic</li>
-            <li><strong>Timeline:</strong> 6–12 months to see final result; hair doesn't look full immediately</li>
-            <li><strong>Permanence:</strong> Transplanted hair is genetically resistant to DHT (comes from back of scalp), so it stays; non-transplanted hair continues to recede unless on finasteride</li>
-        </ul>
-
-        <div class="visual-block">
-            <h4>Hair Transplant Safe Zone vs. At-Risk Zone</h4>
-            <div class="placeholder-image">
-                [Top-down diagram of scalp | Green zone: back of scalp (safe donor area, resistant to DHT) | Red/orange zones: front and crown (recipient areas, still at risk of androgenic loss) | Arrow showing "DHT-resistant hair harvested from here" to "transplanted to here (still at risk without finasteride)"]
-            </div>
-            <p class="image-caption">The "donor area" (back of scalp) is genetically resistant to DHT. The "recipient area" (front/crown) is not. Transplanting doesn't change this; you still need finasteride to protect non-transplanted hair.</p>
-        </div>
-
-        <h3>Post-Transplant Reality: You Still Need Finasteride</h3>
-        <p>Many men don't realize this: <strong>you must stay on finasteride indefinitely post-transplant.</strong> Why?</p>
-        <ul>
-            <li><strong>To protect non-transplanted hair:</strong> Your original hair is still susceptible to DHT; it will keep receding without finasteride</li>
-            <li><strong>Psychological:</strong> You've invested $10,000–15,000; you want to protect that investment</li>
-            <li><strong>Aesthetic:</strong> Without finasteride, your non-transplanted hairline recedes while your transplant stays full, creating an obvious mismatch</li>
-        </ul>
-
-        <div class="evidence-box">
-            <p><strong>Common regret patterns (from transplant forums):</strong> "I wish I had shaved instead of looking weird for 6 months," "I wish I had stabilized my loss first and not rushed," "I wish I'd gone to a better surgeon," "I wish I'd tried medical therapy longer before jumping to surgery."</p>
-        </div>
-
-        <h3>The Alternative: You Might Not Need Surgery</h3>
-        <p>If you're on the fence about surgery, you might not need it. <strong>Finasteride + minoxidil + tretinoin + microneedling can halt and modestly improve at any Norwood stage.</strong> You won't look 25, but you'll look better than you would untreated, and you avoid surgical risk and cost.</p>
-
-        <div class="callout">
-            <p><strong>Decision framework:</strong> If you're Norwood 3–4 and medical therapy gets you 70% where you want to be, surgery is usually worth it (as a top-up). If medical therapy gets you only 30% there, surgery becomes more attractive but also more risky (higher expectations = more regret if results disappoint).</p>
         </div>
     </section>
 
@@ -992,416 +882,6 @@
                 <li>You've been on finasteride for 12+ months and it's not meeting your expectations</li>
                 <li>You're in your 50s+ and want to stop daily medications</li>
             </ul>
-        </div>
-
-        <h3>Signs You're NOT Ready (Yet)</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li>You've been on finasteride for <3 months (give it time)</li>
-                <li>You're considering it during depression or low mood (consult a therapist; this decision shouldn't be made in crisis)</li>
-                <li>You're doing it because you think you "should" (societal pressure, not genuine acceptance)</li>
-                <li>You haven't tried the full medical stack yet (finasteride + minoxidil + tretinoin + microneedling)</li>
-            </ul>
-        </div>
-
-        <h3>What Shaving Actually Feels Like (Real Testimonials)</h3>
-        <div class="cards-grid">
-            <div class="card">
-                <p><em>"Best decision I made. I look intentional, not bald. Confidence is real."</em> — Reddit, r/AskMenOver30</p>
-            </div>
-            <div class="card">
-                <p><em>"I wish I had done it sooner. Stopped wasting time and money."</em> — r/malehairloss</p>
-            </div>
-            <div class="card">
-                <p><em>"Not for me. I need my hair. I'm staying on finasteride."</em> — r/malehairloss</p>
-            </div>
-            <div class="card">
-                <p><em>"Felt powerful once I owned it. People respect decisiveness."</em> — Reddit, r/AskMenOver30</p>
-            </div>
-        </div>
-
-        <h3>The Practical Stuff</h3>
-        <ul>
-            <li><strong>Cost:</strong> Electric razor ($50–150 one-time); upkeep is minimal</li>
-            <li><strong>Maintenance:</strong> Shave every 2–5 days depending on growth</li>
-            <li><strong>Appearance:</strong> Works best if you're willing to lean into it (clean, confident grooming; not unkempt)</li>
-            <li><strong>Age considerations:</strong>
-                <ul>
-                    <li>35–45: Bold move; many men report it looks good, especially with facial hair or glasses</li>
-                    <li>45–55: More socially normalized; less "edgy," more "pragmatic"</li>
-                    <li>55+: Very normal; almost no one questions it</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>Hybrid Approach (If You're Undecided)</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Medical therapy + SMP (Scalp Micropigmentation):</strong> You're treating the loss AND taking control of appearance. SMP looks like stubble, fools most people, no surgery required.</li>
-                <li><strong>Medical therapy + very short haircuts:</strong> Aesthetic win; 2–3mm textured cuts blur the hairline and mini-bald spots</li>
-                <li><strong>Shave crown, keep sides:</strong> Transitional; not common, but some men do it while deciding</li>
-            </ul>
-        </div>
-
-        <div class="callout">
-            <p><strong>The meta-lesson:</strong> Men who regret their hair loss decisions usually regret either rushing into expensive treatments OR waiting too long and regretting lost opportunity. Few regret acceptance once they've committed to it. The key is intentionality—owning your choice, not feeling forced into it.</p>
-        </div>
-    </section>
-
-    <!-- SECTION 8: YOUR PROTOCOL -->
-    <section id="section-protocol">
-        <h2>What's My Personalized Protocol? (The Action Plan)</h2>
-        
-        <p>Based on your Norwood stage and age, here's what the evidence suggests you should try, with realistic timelines and decision points.</p>
-
-        <h3>If You're Norwood 1–2 (Early/Maturing Hairline)</h3>
-        <div class="protocol-box">
-            <h4>Goal: Prevent progression to Norwood 3+</h4>
-            <div class="protocol-step">
-                <p><strong>Phase 1 (Months 1–6):</strong> Finasteride 1mg daily</p>
-                <p>This is the foundation. Start immediately if you're concerned about progression.</p>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 2 (Months 6–12):</strong> Assess at 6-month mark</p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>If stable or improved: maintain indefinitely</li>
-                    <li>If still declining: add minoxidil 5% BID</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 3 (Months 12+):</strong> If still declining</p>
-                <p>Add tretinoin 0.1% 5x/week + upgrade microneedling to 0.6–1.0mm</p>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Expected outcome:</strong> ~90% will stabilize at Norwood 1–2 and maintain</p>
-            </div>
-        </div>
-
-        <h3>If You're Norwood 2–3 (Active Recession, Like Your Profile)</h3>
-        <div class="protocol-box">
-            <h4>Goal: Stabilize + improve density</h4>
-            <div class="protocol-step">
-                <p><strong>Phase 1: Week 1 (Start Immediately)</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Finasteride 1mg daily (with or without food)</li>
-                    <li>Tretinoin 0.1% 2–3x/week nights (escalate to 5x/week by week 4)</li>
-                    <li>Minoxidil 5% twice daily (1mL on dry scalp each time)</li>
-                    <li>Microneedling 0.6–1.0mm first session</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 2: Weeks 2–4</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Tretinoin titrate to 5x/week (if well-tolerated)</li>
-                    <li>Everything else unchanged</li>
-                    <li>Expected: mild tretinoin irritation (erythema, dryness); microneedling erythema resolves in 24 hours</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 3: Weeks 5–12</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Second microneedling session at week 4–5</li>
-                    <li>All meds continued</li>
-                    <li>Expected: possible shedding peak (normal; telogen hairs being pushed out); some men report subtle thickening</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 4: Month 3</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Reassess results; photograph hairline for comparison</li>
-                    <li>If poor response, discuss adding oral minoxidil 5mg with doctor</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 5: Months 4–6</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Continue all above + third microneedling session at month 4</li>
-                    <li>Density improvement becomes more apparent</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 6: Months 7–12</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Continue all above + microneedling every 4 weeks</li>
-                    <li>Peak results achieved by month 12</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Expected outcome:</strong> 94% improve; 60–70% achieve noticeable density improvement and halt recession</p>
-            </div>
-        </div>
-
-        <h3>If You're Norwood 3–4 (Moderate-to-Advanced)</h3>
-        <div class="protocol-box">
-            <h4>Goal: Halt progression + modest improvement (don't expect full restoration)</h4>
-            <div class="protocol-step">
-                <p><strong>Phase 1: Week 1 (Start Immediately)</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Finasteride 1mg daily OR Dutasteride 0.5mg (if wanting stronger suppression)</li>
-                    <li>Tretinoin 0.1% 5x/week from day 1</li>
-                    <li>Minoxidil 5% BID</li>
-                    <li>Microneedling 0.6–1.0mm first session</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 2: Month 1</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Add LLLT cap 3–5x/week (non-pharma boost)</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 3: Month 3</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Reassess response; if inadequate, discuss adding oral minoxidil 5mg or upgrading to dutasteride (if not started)</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Phase 4: Months 4–6</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Consider PRP therapy if plateau observed (3–4 sessions, 4–6 weeks apart)</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Expected outcome:</strong> 85–90% halt recession; 50–60% achieve modest regrowth; remainder stabilize</p>
-            </div>
-        </div>
-
-        <h3>If You're Norwood 4–5+ (Advanced, Considering Surgery or Acceptance)</h3>
-        <div class="protocol-box">
-            <h4>Goal: Maximize salvageable hair; decide on surgery vs. acceptance</h4>
-            <div class="protocol-step">
-                <p><strong>Phase 1–4: Full stack for 12 months</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>Finasteride 1mg or dutasteride 0.5mg</li>
-                    <li>Tretinoin 0.1% 5x/week</li>
-                    <li>Minoxidil 5% BID (consider oral if topical non-responsive)</li>
-                    <li>Microneedling 0.6–1.0mm every 4 weeks</li>
-                    <li>LLLT cap 3–5x/week</li>
-                    <li>PRP (3–4 sessions at months 1–4)</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Month 6: Decision point</strong></p>
-                <ul style="margin: 10px 0 0 20px;">
-                    <li>If 50%+ satisfied with results, continue indefinitely</li>
-                    <li>If <50% satisfied, discuss transplant + continue maintenance therapy</li>
-                </ul>
-            </div>
-            <div class="protocol-step">
-                <p><strong>Expected outcome:</strong> Stabilization likely; regrowth modest; surgery often needed for appearance goals</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 9: 12-WEEK TIMELINE -->
-    <section id="section-timeline">
-        <h2>What Does the First 12 Weeks Actually Look Like?</h2>
-        
-        <p>Men want to know what they're signing up for—side effects, aesthetics, daily burden. Here's what the day-to-day reality looks like.</p>
-
-        <h3>Week 1–2: The Setup Phase</h3>
-        <div class="visual-block">
-            <h4>Week 1-2 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Starting finasteride, tretinoin (low freq), minoxidil, first microneedling</li>
-                <li><strong>What you'll feel:</strong> Mild tretinoin irritation (erythema, dryness); microneedling erythema resolves in 24 hours</li>
-                <li><strong>What you won't see:</strong> No visible hair change yet (biology takes time)</li>
-                <li><strong>Adherence burden:</strong> HIGH (multiple daily applications, medications, microneedling setup)</li>
-                <li><strong>Psychological state:</strong> Excited but uncertain; the burden feels heavy</li>
-            </ul>
-        </div>
-
-        <h3>Week 3–4: The Titration Phase</h3>
-        <div class="visual-block">
-            <h4>Week 3-4 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Tretinoin titrate to 3–4x/week; everything else unchanged</li>
-                <li><strong>What you'll feel:</strong> Tretinoin irritation stabilizes or subsides as skin adapts; possible mild increase in shedding (normal)</li>
-                <li><strong>What you'll see:</strong> Nothing yet</li>
-                <li><strong>Adherence burden:</strong> MODERATE (routine sets in; less novelty stress)</li>
-                <li><strong>Psychological state:</strong> Routine, but impatient</li>
-            </ul>
-        </div>
-
-        <h3>Week 5–8: The Shedding Phase (Critical Milestone)</h3>
-        <div class="visual-block">
-            <h4>Week 5-8 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Second microneedling session at week 4–5; all meds continued</li>
-                <li><strong>What you'll feel:</strong> Shedding may peak around week 6–8 (psychological challenge)</li>
-                <li><strong>What you'll see:</strong> Increased shedding in shower/pillow; some men report subtle thickening (not universal)</li>
-                <li><strong>Adherence burden:</strong> MODERATE (routine established)</li>
-                <li><strong>Psychological state:</strong> <span class="highlight">CRITICAL: This is where most men quit, thinking it's not working. It is.</span> Shedding is telogen hairs being pushed out; this is NORMAL and predictable.</li>
-            </ul>
-        </div>
-
-        <div class="callout">
-            <p><strong>⚠️ IMPORTANT:</strong> Peak shedding weeks 6–8 is the single biggest reason men quit. Reassure yourself: this is EXPECTED. The follicles are cycling; old telogen hairs are being shed to make room for new, thicker anagen hairs. Don't quit.</p>
-        </div>
-
-        <h3>Week 9–12: The Stabilization Phase</h3>
-        <div class="visual-block">
-            <h4>Week 9-12 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Third microneedling session at week 8–9; all meds continued</li>
-                <li><strong>What you'll feel:</strong> Shedding subsiding by week 10–12; tretinoin should be non-irritating by now</li>
-                <li><strong>What you'll see:</strong> Early signs of stabilization; some men notice subtle regrowth (fine, thin hairs in receding areas)</li>
-                <li><strong>Adherence burden:</strong> MODERATE to LOW (it's just routine now)</li>
-                <li><strong>Psychological state:</strong> Cautiously optimistic; beginning to see reason to continue</li>
-                <li><strong>Decision point:</strong> If minimal change by week 12, discuss adding oral minoxidil 5mg with doctor</li>
-            </ul>
-        </div>
-
-        <h3>Month 4–6: The Improvement Phase</h3>
-        <div class="visual-block">
-            <h4>Month 4-6 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Continue all; fourth microneedling at month 4</li>
-                <li><strong>What you'll see:</strong> Density improvement becomes apparent (existing hairs thicker/darker); hairline stabilization obvious; continued microneedling every 4 weeks</li>
-                <li><strong>Adherence burden:</strong> LOW (routine, no more novelty)</li>
-                <li><strong>Psychological state:</strong> Grateful; relieved that you didn't quit</li>
-            </ul>
-        </div>
-
-        <h3>Month 7–12: The Maintenance & Peak Phase</h3>
-        <div class="visual-block">
-            <h4>Month 7-12 Reality Check</h4>
-            <ul>
-                <li><strong>What you're doing:</strong> Continue all; microneedling every 4 weeks</li>
-                <li><strong>What you'll see:</strong> Peak results achieved by month 12; density continues gradual improvement; possible modest regrowth in miniaturized zones</li>
-                <li><strong>Adherence burden:</strong> LOW (indefinite commitment; must have made peace with daily routine by now)</li>
-                <li><strong>Psychological state:</strong> Confident; you've made it to the finish line</li>
-            </ul>
-        </div>
-
-        <div class="visual-block">
-            <h4>12-Month Protocol Visual Timeline</h4>
-            <div class="placeholder-image">
-                [Graphical timeline showing: Weeks 1-4 (setup), Weeks 5-12 (shedding phase with visual warning), Months 1-3 (early response), Months 3-6 (density improvement), Months 7-12 (peak results) | Include mood curve showing excitement → discouragement at week 8 → relief → confidence | Color-code each phase]
-            </div>
-            <p class="image-caption">The first 12 weeks are psychologically and biologically demanding. Knowing this timeline helps you push through the discouraging shedding phase.</p>
-        </div>
-    </section>
-
-    <!-- SECTION 10: TRACKING PROGRESS -->
-    <section id="section-tracking">
-        <h2>Tracking Progress—How to Know If It's Working</h2>
-        
-        <p>Men get discouraged because they can't see subtle changes. This section teaches you how to measure objectively and know when to escalate.</p>
-
-        <h3>Photography Protocol (Repeat Every 3 Months)</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Same location, same lighting, same time:</strong> Front of mirror, morning light, day 1 of month</li>
-                <li><strong>Specific angles:</strong> Frontally (hairline), vertex (crown), right/left temporal at 45°</li>
-                <li><strong>Frequency:</strong> Every 3 months (not weekly; changes are slow and psychological)</li>
-                <li><strong>Camera:</strong> Same phone/device for consistency</li>
-            </ul>
-        </div>
-
-        <h3>What "Improvement" Looks Like</h3>
-        <div class="key-point">
-            <p><span class="highlight">Not full regrowth</span> (that's rare without surgery). Instead, look for:</p>
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Thickening:</strong> More visible density in existing hairs</li>
-                <li><strong>Stabilization:</strong> No new recession; hairline stays put</li>
-                <li><strong>Increased hair count:</strong> In early miniaturized zones</li>
-            </ul>
-        </div>
-
-        <h3>Blunt Markers That Treatment Isn't Working</h3>
-        <ul>
-            <li><strong>Continued recession despite 6+ months of finasteride:</strong> Consider dutasteride or higher dose</li>
-            <li><strong>Worsening shedding beyond week 12:</strong> Something's wrong; see your doctor</li>
-            <li><strong>No change in density by month 6:</strong> Likely non-responder; escalate protocol</li>
-        </ul>
-
-        <h3>Third-Party Feedback</h3>
-        <p>Ask your partner or close friend if they see a difference. Sometimes men see change others don't perceive, or vice versa. Objective validation helps.)
-
-    </section>
-
-    <!-- SECTION 11: MISTAKES -->
-    <section id="section-mistakes">
-        <h2>Common Mistakes (And How to Avoid Them)</h2>
-        
-        <div class="cards-grid">
-            <div class="card">
-                <h4>❌ Stopping Finasteride After 2–3 Months</h4>
-                <p>Perceived side effects are often nocebo or transient. Give it 3–6 months; most resolve or were false alarms.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Under-Dosing Minoxidil</h4>
-                <p>Use full 1mL on dry scalp, not wet. Dilution kills efficacy. Consistency matters more than concentration.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Quitting During Shedding Phase</h4>
-                <p>Weeks 6–12 are psychologically brutal but biologically necessary. Shedding = old hairs being pushed out by new ones. Don't quit.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Expecting Full Restoration</h4>
-                <p>Medical therapy halts loss and improves density modestly. Full restoration usually requires surgery, and even then, you're supplementing, not replacing, meds.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Rushing to Hair Transplant</h4>
-                <p>Without stabilizing loss first (6–12 months on finasteride), you'll regret it. Bad hairline design + continued recession = regret.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Microneedling Too Frequently</h4>
-                <p>Every day is worse than every 4 weeks. Recovery and efficacy depend on spacing. More frequent = more inflammation, less benefit.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Applying Minoxidil Immediately After Microneedling</h4>
-                <p>Wait 24 hours. Immediate application = irritation and systemic absorption, defeating the point of topical.</p>
-            </div>
-            <div class="card">
-                <h4>❌ Switching Treatments Too Frequently</h4>
-                <p>Every treatment needs 6+ months to judge efficacy. Jumping between options wastes time and money.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 12: NEXT STEPS -->
-    <section id="section-next-steps">
-        <h2>Resources & Next Steps</h2>
-        
-        <h3>Week 1: Find a Doctor</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>In-person dermatologist:</strong> Specializing in hair loss (not just "a dermatologist")</li>
-                <li><strong>Telederm options:</strong> Keeps, Hims, Roman (convenient; less personalized)</li>
-                <li><strong>Questions to ask:</strong>
-                    <ul style="margin: 10px 0 0 20px;">
-                        <li>"What would you recommend for [my Norwood stage] at [my age]?"</li>
-                        <li>"If finasteride doesn't work, what's the escalation plan?"</li>
-                        <li>"Do you have before/afters from patients like me?"</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <h3>Week 1–2: Get Prescriptions & Supplies</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Finasteride (generic):</strong> GoodRx, Mark Cuban Cost Plus Drugs ($5–20/month)</li>
-                <li><strong>Minoxidil (OTC):</strong> Costco, Amazon ($20–50/month)</li>
-                <li><strong>Tretinoin (Rx):</strong> From dermatologist ($20–60/month)</li>
-                <li><strong>Microneedling device:</strong> Amazon, dermaroller.com ($50–200)</li>
-            </ul>
-        </div>
-
-        <h3>Online Communities (For Support & Real Outcomes)</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>r/malehairloss:</strong> Evidence-based moderation; realistic discussions</li>
-                <li><strong>r/AskMenOver30:</strong> Acceptance narratives, realistic expectations</li>
-                <li><strong>HairLossTalk forums:</strong> Long-form discussions, varied outcomes, seasoned users</li>
-            </ul>
-        </div>
-
-        <h3>Disclaimer</h3>
-        <div class="disclaimer">
-            <p><strong>Medical Disclaimer:</strong> This article is educational and does not constitute medical advice. Hair loss treatment should be discussed with a qualified healthcare provider. Individual responses to medications vary. Finasteride, minoxidil, tretinoin, and other treatments carry potential side effects and contraindications. Consult your doctor before starting any regimen, especially if you have pre-existing health conditions.</p>
         </div>
     </section>
 
@@ -1434,5 +914,3 @@
 
 </body>
 </html>
-
-
