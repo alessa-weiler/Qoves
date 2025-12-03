@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Male Pattern Baldness: An Evidence-Based Guide to Hair Loss Options</title>
+    <title>Male Pattern Baldness: An Evidence-Based Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=PP+Neue+Montreal:wght@400;500;700&display=swap');
 
@@ -14,10 +14,10 @@
         }
 
         body {
-            font-family: "ppNeueMontreal", "ppNeueMontreal Fallback", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.65;
+            font-family: "ppNeueMontreal", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #233137;
             background: #fff;
+            line-height: 1.65;
         }
 
         .container {
@@ -26,7 +26,6 @@
             padding: 40px 20px;
         }
 
-        /* Header & Navigation */
         header {
             background: linear-gradient(135deg, #cddbe1 0%, #b8c7ce 100%);
             color: #233137;
@@ -39,92 +38,38 @@
             font-size: 2.5em;
             margin-bottom: 15px;
             font-weight: 700;
-            color: #233137;
-            font-family: "f37Zagma", "f37Zagma Fallback", serif;
         }
 
         header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-            max-width: 700px;
-            margin: 0 auto;
+            font-size: 1.05em;
             color: #758085;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.8;
         }
 
         .article-meta {
             font-size: 0.9em;
-            opacity: 0.85;
-            margin-top: 20px;
             color: #758085;
+            margin-top: 20px;
         }
 
-        /* Quick FAQ - Above the Fold */
-        .quick-faq {
-            background: #fff;
-            border-left: 5px solid #cddbe1;
-            padding: 40px;
-            margin: 60px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.08);
-        }
-
-        .quick-faq h2 {
-            font-size: 1.6em;
-            margin-bottom: 30px;
-            color: #233137;
-            font-family: "f37Zagma", "f37Zagma Fallback", serif;
-            border: none;
-            padding: 0;
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 15px;
-        }
-
-        .faq-item {
-            background: #f9fafb;
-            padding: 15px 20px;
-            border-radius: 6px;
-            border-left: 3px solid #cddbe1;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            background: #f0f3f4;
-            transform: translateX(5px);
-        }
-
-        .faq-item a {
-            color: #cddbe1;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .faq-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Styling */
         section {
-            margin: 80px 0;
+            margin: 70px 0;
         }
 
         h2 {
             font-size: 2em;
             margin-bottom: 30px;
             color: #233137;
-            padding-bottom: 15px;
             border-bottom: 2px solid #cddbe1;
-            font-family: "f37Zagma", "f37Zagma Fallback", serif;
+            padding-bottom: 15px;
         }
 
         h3 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             margin: 35px 0 20px 0;
             color: #233137;
-            font-family: "f37Zagma", "f37Zagma Fallback", serif;
         }
 
         h4 {
@@ -135,42 +80,148 @@
         }
 
         p {
-            margin-bottom: 20px;
-            line-height: 1.75;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        strong {
             color: #233137;
         }
 
-        /* Visual Elements */
-        .visual-block {
-            background: #fff;
-            border-radius: 8px;
+        .intro-box {
+            background: linear-gradient(135deg, #cddbe115 0%, #b8c7ce15 100%);
+            border-left: 4px solid #cddbe1;
             padding: 30px;
             margin: 40px 0;
+            border-radius: 6px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .box {
+            background: #f9fafb;
+            border-left: 4px solid #cddbe1;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 6px;
+        }
+
+        .highlight {
+            background: #cddbe1;
+            padding: 3px 7px;
+            border-radius: 3px;
+            color: #233137;
+        }
+
+        .quick-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .nav-item {
+            background: #f9fafb;
             border: 1px solid #cddbe1;
-            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.06);
+            padding: 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #cddbe1;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
         }
 
-        .visual-block h4 {
-            margin-top: 0;
-            color: #758085;
+        .nav-item:hover {
+            background: #f0f3f4;
+            transform: translateX(5px);
         }
 
-        .placeholder-image {
+        ul, ol {
+            margin: 18px 0 18px 25px;
+            color: #233137;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.75;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(35, 49, 55, 0.06);
+        }
+
+        th {
+            background: #cddbe1;
+            color: #233137;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e8ebed;
+            color: #233137;
+            font-size: 0.95em;
+        }
+
+        tr:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        .treatment-list {
+            margin: 30px 0;
+        }
+
+        .treatment-item {
+            background: #fff;
+            border-left: 4px solid #cddbe1;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .treatment-number {
+            display: inline-block;
+            background: #cddbe1;
+            color: #233137;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 0.95em;
+        }
+
+        .visual-placeholder {
             background: linear-gradient(135deg, #cddbe115 0%, #b8c7ce15 100%);
             width: 100%;
-            height: 350px;
+            height: 300px;
             border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1em;
+            font-size: 0.95em;
             color: #758085;
             font-weight: 600;
             border: 2px dashed #cddbe1;
-            margin: 20px 0;
+            margin: 25px 0;
+            text-align: center;
+            padding: 20px;
         }
 
-        .image-caption {
+        .caption {
             font-size: 0.9em;
             color: #758085;
             font-style: italic;
@@ -178,239 +229,24 @@
             text-align: center;
         }
 
-        /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: #fff;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(35, 49, 55, 0.06);
-        }
-
-        .comparison-table th {
-            background: #cddbe1;
-            color: #233137;
-            padding: 18px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .comparison-table td {
-            padding: 16px 18px;
-            border-bottom: 1px solid #e8ebed;
-            color: #233137;
-        }
-
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: #fafbfc;
-        }
-
-        /* Key Points Box */
-        .key-point {
-            background: #f0f3f4;
+        .disclaimer {
+            background: #f9f8f0;
             border-left: 4px solid #cddbe1;
             padding: 20px;
-            margin: 25px 0;
+            margin: 40px 0;
             border-radius: 4px;
-        }
-
-        .key-point strong {
+            font-size: 0.95em;
             color: #233137;
         }
 
-        /* Evidence Box */
-        .evidence-box {
-            background: #f7f8fa;
-            border-left: 4px solid #758085;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-
-        .evidence-box p {
-            margin-bottom: 10px;
-            color: #233137;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            margin: 40px 0;
-        }
-
-        .timeline-item {
-            margin-left: 30px;
-            padding-bottom: 30px;
-            border-left: 2px solid #cddbe1;
-            position: relative;
-        }
-
-        .timeline-item:last-child {
-            border-left: none;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #cddbe1;
-            border-radius: 50%;
-            border: 3px solid #fff;
-        }
-
-        .timeline-item h4 {
-            margin-top: 0;
-            color: #758085;
-        }
-
-        /* Protocol Box */
-        .protocol-box {
-            background: #fff;
-            border: 2px solid #cddbe1;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .protocol-box h4 {
-            color: #758085;
-            margin-top: 0;
-        }
-
-        .protocol-step {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e8ebed;
-            color: #233137;
-        }
-
-        .protocol-step:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        /* List Styling */
-        ul, ol {
-            margin: 20px 0 20px 20px;
-            color: #233137;
-        }
-
-        li {
-            margin-bottom: 12px;
-            line-height: 1.7;
-            color: #233137;
-        }
-
-        /* Cards Grid */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #cddbe1;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 24px rgba(205, 219, 225, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .card h4 {
-            margin-top: 0;
-            color: #758085;
-        }
-
-        .card p {
-            margin-bottom: 0;
-            color: #233137;
-        }
-
-        /* Treatment Ranking */
-        .ranking-item {
-            background: #fff;
-            border-left: 4px solid #cddbe1;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-
-        .ranking-number {
-            display: inline-block;
-            background: #cddbe1;
-            color: #233137;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 32px;
-            font-weight: 700;
-            margin-right: 15px;
-            font-size: 0.9em;
-        }
-
-        .ranking-content {
-            display: inline-block;
-            vertical-align: top;
-            width: calc(100% - 55px);
-        }
-
-        .ranking-content h4 {
-            margin: 0 0 8px 0;
-            color: #758085;
-        }
-
-        .ranking-content p {
-            color: #233137;
-        }
-
-        /* Callout */
-        .callout {
-            background: linear-gradient(135deg, #cddbe115 0%, #b8c7ce15 100%);
-            border: 2px solid #cddbe1;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-
-        .callout strong {
-            color: #233137;
-        }
-
-        .callout p {
-            color: #233137;
-        }
-
-        /* Footer */
         footer {
             background: #233137;
             color: #fff;
-            padding: 40px 20px;
+            padding: 50px 20px;
             margin-top: 100px;
             text-align: center;
         }
 
-        footer p {
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
@@ -424,31 +260,9 @@
                 padding: 20px 15px;
             }
 
-            .visual-block {
-                padding: 20px;
+            .visual-placeholder {
+                height: 200px;
             }
-
-            .placeholder-image {
-                height: 250px;
-            }
-        }
-
-        /* Disclaimer */
-        .disclaimer {
-            background: #f9f8f0;
-            border-left: 4px solid #cddbe1;
-            padding: 15px;
-            margin: 30px 0;
-            border-radius: 4px;
-            font-size: 0.95em;
-            color: #233137;
-        }
-
-        .highlight {
-            background: #cddbe1;
-            padding: 2px 6px;
-            border-radius: 3px;
-            color: #233137;
         }
     </style>
 </head>
@@ -464,110 +278,70 @@
 
 <div class="container">
 
-    <!-- INTRODUCTION -->
-    <section>
-        <p style="font-size: 1.15em; line-height: 1.85; color: #233137;">By 40, <strong>50% of men</strong> show some degree of male pattern baldness—yet most delay treatment until they've lost years of opportunity to intervene. If you're reading this, you're probably asking whether it's worth starting now, whether the meds will wreck your sex life, and whether you're staring down a $10,000 hair transplant or need to accept the buzz cut. The good news: the science has evolved, and a combination of cheap, well-established drugs plus some thoughtful additions can halt recession and modestly improve density even at 45, 50, or beyond. But you need to know what actually works, what's marketing, and when to stop fighting and shave. This guide cuts through the noise and gives you the evidence-based answer: what to do, why it works, what it costs, and what to realistically expect in the next 12 months.</p>
-    </section>
 
-    <!-- QUICK FAQ - ABOVE THE FOLD -->
-    <section class="quick-faq">
-        <h2>If You're 35–55 and Losing Hair, Here's What You Actually Need to Know</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                ✓ <a href="#section-too-old">Am I too old to start treatment?</a>
-            </div>
-            <div class="faq-item">
-                ✓ <a href="#section-sex-life">Will these meds wreck my sex life?</a>
-            </div>
-            <div class="faq-item">
-                ✓ <a href="#section-forever">Do I really have to take this forever?</a>
-            </div>
-            <div class="faq-item">
-                ✓ <a href="#section-transplant">How do I avoid a botched hair transplant?</a>
-            </div>
-            <div class="faq-item">
-                ✓ <a href="#section-shave">When is it smarter to just shave?</a>
-            </div>
+    <section>
+        <div class="intro-box">
+            <p>By the age of 50, <a href="https://pubmed.ncbi.nlm.nih.gov/14819896/">50% of men</a> show some degree of male pattern baldness. Yet most delay treatment until they've lost years of opportunity to intervene. If you're reading this, you're probably asking whether it's worth starting now, whether the meds will wreck your sex life, and whether you're staring down a $10,000 hair transplant or need to accept the buzz cut. The good news is that the science has evolved, and a combination of cheap, well-established drugs plus some thoughtful additions can halt recession and modestly improve density even at 45, 50, or beyond. But you need to know what actually works, what's marketing, and when to stop fighting and shave. This guide cuts through the noise and gives you the evidence-based answer: what to do, why it works, what it costs, and what to realistically expect in the next 12 months.</p>
         </div>
     </section>
 
-    <!-- SECTION 1: AM I ACTUALLY BALDING -->
-    <section id="section-actual">
+
+    <section>
+        <h2>If You're 35–55 and Losing Hair, Here's What You Actually Need to Know</h2>
+        <div class="quick-nav">
+            <a href="#too-old" class="nav-item"> Am I too old to start treatment?</a>
+            <a href="#sex-life" class="nav-item"> Will these meds wreck my sex life?</a>
+            <a href="#forever" class="nav-item"> Do I really have to take this forever?</a>
+            <a href="#transplant" class="nav-item"> How do I avoid a botched hair transplant?</a>
+            <a href="#shave" class="nav-item"> When is it smarter to just shave?</a>
+        </div>
+    </section>
+
+
+    <section id="actually-balding">
         <h2>Am I Actually Balding? (And Is This Normal at My Age?)</h2>
         
         <p>Hairline maturation is not the same as male pattern baldness, and many men confuse the two. Here's how to tell the difference, objectively track what's happening, and know if you're within the normal range for your age.</p>
 
-        <h3>What's Normal: Hairline Maturation vs. Active Baldness</h3>
-        <p>Between ages 20-40, most men experience a small amount of hairline recession. This is <strong>normal, not pathological</strong>. A mature hairline is typically characterized by slightly recessed temples (a small "M" shape) but maintained density. Active male pattern baldness, by contrast, shows:</p>
         <ul>
-            <li>Progressive recession of the hairline month-to-month or year-to-year</li>
-            <li>Visible thinning at the crown or temples</li>
-            <li>Widening of the part line</li>
-            <li>Increased hair on pillows or in the shower (though some shedding is normal)</li>
+            <li>Normal ("M" shape) hair maturation <a href= "https://onlinelibrary.wiley.com/doi/10.1111/bjd.12842">vs active male pattern baldness</a> (visible thinning at crown/temples, recession of hairline)</li>
+            <li>Explain Norwood Scale very briefly [image of Norwood 1-7 instead of wordy explanation]</li>
         </ul>
 
-        <div class="visual-block">
-            <h4>Norwood Scale: How Hair Loss Progresses</h4>
-            <div class="placeholder-image">
-                [Diagram: Norwood Scale 1-7 progression chart | Show side-by-side illustrations of each stage | Include age-typical ranges for each stage (e.g., "Norwood 2-3: typical by age 35-45") | Use color overlay to highlight most common presentation ages]
-            </div>
-            <p class="image-caption">The Norwood Scale classifies male hair loss from Stage 1 (no loss) to Stage 7 (extensive loss). Most men asking this question fall into stages 2-4. Source: Dermatologic classification system</p>
+        <div class="visual-placeholder">
+            Diagram: Norwood Scale 1-7 progression chart // Show side-by-side illustrations of each stage // Include age-typical ranges for each stage (e.g., "Norwood 2-3: typical by age 35-45") // Use color overlay to highlight most common presentation ages
         </div>
+        <p class="caption">The Norwood Scale classifies male hair loss from Stage 1 (no loss) to Stage 7 (extensive loss). Most men asking this question fall into stages 2-4. Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4812885/">Gupta and Mysore, 2016</a></p>
 
-        <h3>How to Measure Loss Objectively (The Photography Method)</h3>
-        <p>Stop guessing. Use this simple protocol to track objectively:</p>
-        <div class="key-point">
-            <strong>Photography Protocol:</strong>
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Frequency:</strong> Photo every 3 months (not weekly; changes are slow)</li>
-                <li><strong>Same location:</strong> Home bathroom, same mirror, same position</li>
-                <li><strong>Same lighting:</strong> Natural daylight from the same direction</li>
-                <li><strong>Same angles:</strong> Front (hairline), vertex (crown), both temples</li>
-                <li><strong>Same camera:</strong> Use same phone/device for consistency</li>
-            </ul>
-        </div>
+        <ul>
+            <li>TLDR: photograph every 3 months to actually see if its normal or active, and compare to Norwood scale image</li>
+        </ul>
 
-        <div class="visual-block">
-            <h4>How to Photograph Your Scalp for Tracking</h4>
-            <div class="placeholder-image">
-                [Diagram: Three correct angles for photography | Show front-view hairline angle (camera at eye level, 12 inches away) | Vertex angle (camera directly overhead) | Temple angle (90° profile) | Include checkmarks for "correct" and X marks for "incorrect" positioning]
-            </div>
-            <p class="image-caption">Consistent photography angles make it easy to compare month-to-month changes without the subjective bias of "does it look worse today?"</p>
-        </div>
+        <h3>Is This Genetic? What's actually going on?</h3>
 
-        <h3>Is This Genetic?</h3>
         <p>Male pattern baldness (androgenetic alopecia) is driven by three factors:</p>
+
         <ul>
-            <li><strong>Genetics:</strong> If your father, grandfather, or uncles went bald, you likely carry the susceptibility</li>
-            <li><strong>Age:</strong> The older you get, the higher the odds; 50% of men show loss by 50</li>
-            <li><strong>Androgen sensitivity:</strong> Your scalp follicles' sensitivity to DHT (a hormone) determines how fast you lose hair</li>
+            <li><strong>Genetics:</strong> If your father, grandfather, or uncles went bald, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5308812/"> you likely carry the susceptibility </a></li>
+            <li><strong>Age:</strong> The older you get, the higher the odds; <a href="https://pubmed.ncbi.nlm.nih.gov/14819896/">50% of men show loss by 50</a></li>
+            <li><strong>Androgen sensitivity:</strong> Your scalp follicles' <a href="https://www.sciencedirect.com/science/article/abs/pii/S1571891304001359"> sensitivity to DHT (a hormone) </a> determines how fast you lose hair</li>
         </ul>
-        <p><span class="highlight">Important:</span> You can't change your genetics, but you can intervene to slow or halt the process before it becomes severe.</p>
+
+        <div class="visual-placeholder">
+            Insert a diagram showing a very surface level molecular explanation and how various treatments influence this
+        </div>
+
+        <div class="box">
+            <p><strong>Important:</strong> You can't change your genetics, but you can intervene to slow or halt the process before it becomes severe.</p>
+        </div>
     </section>
 
-    <!-- SECTION 2: AM I TOO OLD -->
-    <section id="section-too-old">
-        <h2>Am I Too Old to Start? (The "Is It Too Late?" Question)</h2>
+    <section id="too-old">
+        <h2>Am I Too Old to Start? Is it too late?</h2>
+
+        <h3>Set expectations (see table)</h3>
         
-        <p style="font-size: 1.1em;"><strong>No. Age 35–55 is actually prime intervention time because your follicles are still viable but not yet destroyed.</strong> Starting treatment at 45 can still halt loss and improve density meaningfully. Waiting until 60+ is when you've truly limited your options.</p>
-
-        <h3>Why Earlier Is Better, But Not Game-Changing</h3>
-        <p>At different stages of hair loss, your follicles are in different states. Here's what matters:</p>
-
-        <div class="visual-block">
-            <h4>Follicle Viability by Norwood Stage and Age</h4>
-            <div class="placeholder-image">
-                [Chart: Two axes | Y-axis: Treatment responsiveness (100% to 0%) | X-axis: Norwood stage (1-7) + age (30, 40, 50, 60+) | Curve showing dramatic decline in responsiveness after Norwood 5 | Shade area showing "optimal intervention zone" (Norwood 2-4, ages 30-50)]
-            </div>
-            <p class="image-caption">Follicles miniaturized at Norwood 2-3 are still highly recoverable. By Norwood 5-6, many are too damaged to recover with medication alone.</p>
-        </div>
-
-        <div class="key-point">
-            <strong>The critical window:</strong> From Norwood 1-4 (typically ages 25-50), you have maximum follicle reserve. Start treatment at 45 with Norwood 3? You can still achieve stabilization plus modest regrowth. Start at 60 with Norwood 5? You're mostly looking at halting further loss, with little regrowth potential.
-        </div>
-
-        <h3>Realistic Expectations by Age and Norwood Stage</h3>
-        <table class="comparison-table">
+        <table>
             <thead>
                 <tr>
                     <th>Your Profile</th>
@@ -599,226 +373,1059 @@
             </tbody>
         </table>
 
-        <div class="evidence-box">
-            <p><strong>Evidence:</strong> Long-term studies of finasteride (the most-studied drug for hair loss) show that men starting at 45 with Norwood 3 achieve an average 11–15% increase in hair count over 12 months and maintain it for decades, as long as they continue treatment. Regret is rare in this group.</p>
+        <ul>
+            <li>The earlier you start the better because follicles are still there and not yet destroyed. If you're not sure your best bet is to start treatment - you can always stop treatment but you cant start it when you're at norwood stage 6 or 7.</li>
+        </ul>
+
+        <div class="visual-placeholder">
+            Chart: Two axes | Y-axis: Treatment responsiveness (100% to 0%) | X-axis: Norwood stage (1-7) + age (30, 40, 50, 60+) | Curve showing dramatic decline in responsiveness after Norwood 5 | Shade area showing "optimal intervention zone" (Norwood 2-4, ages 30-50)
         </div>
+
+        <p><strong>The critical window:</strong> From Norwood 1-4 (typically ages 25-50), you have maximum follicle reserve. Start treatment at 45 with Norwood 3? You can still achieve stabilization plus modest regrowth. Start at 60 with Norwood 5? You're mostly looking at halting further loss, with little regrowth potential.</p>
+
+        <p><strong>Evidence:</strong> Long-term studies of finasteride (the most-studied drug for hair loss) show that men starting at 45 with Norwood 3 achieve an average 11–15% increase in hair count over 12 months and maintain it for decades, as long as they continue treatment. Regret is rare in this group.</p>
     </section>
 
-    <!-- SECTION 3: WHAT WORKS -->
-    <section id="section-what-works">
-        <h2>What Actually Works, and What's Snake Oil?</h2>
+    
+    <section id="forever">
+        <h2>Do I Have to Take This Forever? </h2>
         
-        <p>Five things have robust evidence. Everything else is marketing. Here's what the data actually says, not what supplement companies claim.</p>
+        <p><strong>Yes. You have to continue indefinitely if you want to keep the benefits.</strong> Stop finasteride or minoxidil, and you lose hair at your "natural" rate within 3–6 months.</p>
+
+        <p>The damned if you do, damned if you don't: lots of men feel trapped, if they start treatment they need to take it forever and are trapped in that hamster wheel, vs if they don't in time they may regret it when it's progressed further. This isn't addiction!! It's because your underlying genetics don't change. Think of it like taking statins for cholesterol where when you stop, your cholesterol goes back up.</p>
+
+        <p>Finasteride blocks DHT synthesis; minoxidil prolongs anagen; tretinoin upregulates enzymes. But none of these change your underlying genetic susceptibility to hair loss. They're interventions that require constant application to maintain their effect. Once you stop, your follicles revert to their natural state: miniaturized and short-cycled.</p>
+
+        <p><strong>This is not a failure of the treatment.</strong> It's a reflection of how biology works. Your genes are constant; the medications counteract them. Stop the countermeasure, and the original problem returns.</p>
+    </section>
+
+    <section id="what-works">
+        <h2>What Actually Works?</h2>
+
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Follicle Biology </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "ppNeueMontreal", Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fff;
+            color: #233137;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: "f37Zagma", serif;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #233137;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #758085;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        #canvas-container {
+            background: #cddbe1;
+            border: 2px solid #cddbe1;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 700px;
+            position: relative;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .controls-panel {
+            background: #fff;
+            border: 2px solid #cddbe1;
+            border-radius: 12px;
+            padding: 25px;
+            max-height: 700px;
+            overflow-y: auto;
+        }
+
+        .controls-panel h2 {
+            font-family: "f37Zagma", serif;
+            color: #233137;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .state-tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-button {
+            padding: 12px;
+            border: 2px solid #cddbe1;
+            background: transparent;
+            color: #233137;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .tab-button:hover {
+            background: #cddbe1;
+            color: #233137;
+        }
+
+        .tab-button.active {
+            background: #233137;
+            color: #fff;
+            border-color: #233137;
+        }
+
+        .interventions {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #cddbe1;
+        }
+
+        .interventions h3 {
+            color: #233137;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .intervention-button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid #233137;
+            background: transparent;
+            color: #233137;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .intervention-button:hover {
+            background: #cddbe1;
+            transform: translateX(5px);
+        }
+
+        .intervention-button.applied {
+            background: #233137;
+            color: #fff;
+        }
+
+        .state-info {
+            background: #cddbe1;
+            border-left: 3px solid #233137;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #233137;
+        }
+
+        .state-info h4 {
+            color: #233137;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .molecule-legend {
+            background: #cddbe1;
+            border-left: 3px solid #233137;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.85em;
+        }
+
+        .molecule-legend h4 {
+            color: #233137;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .molecule-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #233137;
+        }
+
+        .molecule-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .reset-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: 2px solid #758085;
+            background: transparent;
+            color: #758085;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .reset-button:hover {
+            background: #cddbe1;
+            color: #233137;
+            border-color: #233137;
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            #canvas-container {
+                height: 500px;
+            }
+
+            .controls-panel {
+                max-height: none;
+            }
+        }
+
+        .disclaimer {
+            background: #cddbe1;
+            border-left: 3px solid #758085;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #233137;
+        }
+
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #233137;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="content">
+        <div id="canvas-container">
+            <div class="loading-text">Loading visualization...</div>
+        </div>
+
+        <div class="controls-panel">
+            <h2>Hair Follicle States</h2>
+
+            <div class="state-tabs">
+                <button class="tab-button active" data-state="healthy">Normal Growth</button>
+                <button class="tab-button" data-state="dht">DHT Miniaturized</button>
+            </div>
+
+            <div class="state-info">
+                <h4 id="state-title">Normal Hair Growth (Anagen)</h4>
+                <div id="state-description"></div>
+            </div>
+
+            <div class="molecule-legend">
+                <h4>Molecular Actors</h4>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #667eea;"></div>
+                    <span><strong>DHT:</strong> Hormone signal</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #48bb78;"></div>
+                    <span><strong>Growth Factors:</strong> Pro-anagen</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #f56565;"></div>
+                    <span><strong>Apoptotic:</strong> Pro-death signals</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #ed8936;"></div>
+                    <span><strong>Androgen Receptor:</strong> DHT receptor</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #4299e1;"></div>
+                    <span><strong>Wnt/β-Catenin:</strong> Anagen signal</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #fbbf24;"></div>
+                    <span><strong>Tretinoin Effect:</strong> Enzyme upregulation</span>
+                </div>
+                <div class="molecule-item">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; background: radial-gradient(circle, rgba(232,93,93,0.3) 0%, transparent 70%);"></div>
+                    <span><strong>Red Glow:</strong> Blood supply around DP</span>
+                </div>
+            </div>
+
+            <div class="interventions" id="interventions" style="display: none;">
+                <h3>Add Interventions (DHT State Only)</h3>
+                <button class="intervention-button" data-intervention="finasteride">+ Finasteride (Block DHT)</button>
+                <button class="intervention-button" data-intervention="minoxidil">+ Minoxidil (Extend Anagen)</button>
+                <button class="intervention-button" data-intervention="microneedling">+ Microneedling (↑ Growth Factors)</button>
+                <button class="intervention-button" data-intervention="tretinoin">+ Tretinoin (↑ Enzyme Activity)</button>
+            </div>
+
+            <div class="disclaimer">
+                <strong>Note:</strong> This visualization shows molecular mechanisms in simplified form. Real hair biology is more complex, but these pathways are evidence-based.
+            </div>
+
+            <button class="reset-button" id="reset-button">Reset All</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// ===== THREE.JS SETUP =====
+const canvas = document.getElementById('canvas-container');
+let scene, camera, renderer;
+let currentState = 'healthy';
+let interventions = {
+    finasteride: false,
+    minoxidil: false,
+    microneedling: false,
+    tretinoin: false
+};
+let follicleGroup;
+
+function initThreeJS() {
+    // Scene
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xcddbe1);
+    scene.fog = new THREE.Fog(0xcddbe1, 100, 500);
+
+    // Camera
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    camera.position.z = 8;
+
+    // Renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+    
+    // Clear loading text
+    canvas.textContent = '';
+    canvas.appendChild(renderer.domElement);
+
+    // Lighting - adjusted for light background
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+    scene.add(ambientLight);
+
+    const pointLight1 = new THREE.PointLight(0xffffff, 0.6, 100);
+    pointLight1.position.set(5, 5, 10);
+    pointLight1.castShadow = true;
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0xf0f0f0, 0.4, 100);
+    pointLight2.position.set(-5, -5, 10);
+    scene.add(pointLight2);
+
+    // Follicle group
+    follicleGroup = new THREE.Group();
+    scene.add(follicleGroup);
+
+    // Create initial follicle
+    createFollicle('healthy');
+
+    // Event listeners
+    document.querySelectorAll('[data-state]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            switchState(e.target.dataset.state);
+            document.querySelectorAll('[data-state]').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('[data-intervention]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            toggleIntervention(e.target.dataset.intervention, e.target);
+        });
+    });
+
+    document.getElementById('reset-button').addEventListener('click', resetAll);
+
+    window.addEventListener('resize', onWindowResize);
+
+    animate();
+}
+
+function createFollicle(state) {
+    // Clear existing
+    while (follicleGroup.children.length > 0) {
+        follicleGroup.remove(follicleGroup.children[0]);
+    }
+
+    const isHealthy = state === 'healthy';
+    
+    // Calculate intervention effects
+    const activeInterventions = Object.values(interventions).filter(v => v).length;
+    
+    const params = {
+        healthy: {
+            dpRadius: 0.7,
+            hairRadius: 0.4,
+            hairHeight: 6,
+            color: 0x2c3e50,
+            dpColor: 0xed8936,
+            wallColor: 0x4a5568
+        },
+        dht: {
+            dpRadius: 0.35,
+            hairRadius: 0.15,
+            hairHeight: 2,
+            color: 0x5a5a5a,
+            dpColor: 0xd69e8c,
+            wallColor: 0x4a5568
+        }
+    };
+
+    let p = isHealthy ? params.healthy : params.dht;
+
+    // === SCALE UP FOLLICLE WITH INTERVENTIONS ===
+    if (!isHealthy && activeInterventions > 0) {
+        // Gradually restore toward healthy size based on intervention count
+        const recoveryFactor = activeInterventions * 0.15; // 0.15 per intervention
+        p.dpRadius = 0.35 + (0.35 * recoveryFactor);
+        p.hairRadius = 0.15 + (0.25 * recoveryFactor);
+        p.hairHeight = 2 + (4 * recoveryFactor);
+    }
+
+    // === DERMAL PAPILLA ===
+    const dpGeo = new THREE.SphereGeometry(p.dpRadius, 32, 32);
+    const dpEmissive = activeInterventions > 0 && !isHealthy ? 0x48bb78 : p.dpColor;
+    const dpMat = new THREE.MeshStandardMaterial({
+        color: p.dpColor,
+        metalness: 0.4,
+        roughness: 0.6,
+        emissive: dpEmissive,
+        emissiveIntensity: activeInterventions > 0 && !isHealthy ? 0.6 : 0.3
+    });
+    const dp = new THREE.Mesh(dpGeo, dpMat);
+    dp.position.y = -p.hairHeight / 2 - 0.5;
+    dp.castShadow = true;
+    dp.receiveShadow = true;
+    follicleGroup.add(dp);
+
+    // === HAIR MATRIX ===
+    const matrixGeo = new THREE.CylinderGeometry(p.hairRadius * 1.4, p.dpRadius * 0.8, 0.8, 16);
+    const matrixMat = new THREE.MeshStandardMaterial({
+        color: 0x9f7aea,
+        metalness: 0.2,
+        roughness: 0.7
+    });
+    const matrix = new THREE.Mesh(matrixGeo, matrixMat);
+    matrix.position.y = -p.hairHeight / 2 + 0.5;
+    matrix.castShadow = true;
+    follicleGroup.add(matrix);
+
+    // === HAIR SHAFT ===
+    const hairGeo = new THREE.CylinderGeometry(p.hairRadius, p.hairRadius, p.hairHeight, 16);
+    const hairMat = new THREE.MeshStandardMaterial({
+        color: p.color,
+        metalness: 0.3,
+        roughness: 0.7
+    });
+    const hair = new THREE.Mesh(hairGeo, hairMat);
+    hair.position.y = 0;
+    hair.castShadow = true;
+    hair.receiveShadow = true;
+    follicleGroup.add(hair);
+
+    // === FOLLICLE WALL ===
+    const wallGeo = new THREE.CylinderGeometry(p.hairRadius * 2.5, p.hairRadius * 2.8, p.hairHeight + 2, 20);
+    const wallMat = new THREE.MeshStandardMaterial({
+        color: p.wallColor,
+        metalness: 0.1,
+        roughness: 0.8,
+        side: THREE.BackSide
+    });
+    const wall = new THREE.Mesh(wallGeo, wallMat);
+    follicleGroup.add(wall);
+
+    // === MOLECULES ===
+    if (isHealthy) {
+        // Growth factors (green) - MANY
+        for (let i = 0; i < 15; i++) {
+            const mol = createMolecule(0x48bb78, 0.22);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 4 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Wnt/β-Catenin (cyan) - MANY
+        for (let i = 0; i < 10; i++) {
+            const mol = createMolecule(0x4299e1, 0.2);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 4 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+    } else {
+        // DHT molecules (blue) - baseline
+        const dhtCount = Math.max(3, 10 - activeInterventions * 2);
+        for (let i = 0; i < dhtCount; i++) {
+            const mol = createMolecule(0x667eea, 0.2);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 2 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Apoptotic factors (red) - REDUCED with interventions
+        const apopCount = Math.max(1, 8 - activeInterventions * 2);
+        for (let i = 0; i < apopCount; i++) {
+            const mol = createMolecule(0xf56565, 0.18);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 2 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Androgen receptors on DP (orange)
+        for (let i = 0; i < 6; i++) {
+            const angle = (i / 6) * Math.PI * 2;
+            const receptor = createMolecule(0xed8936, 0.15);
+            receptor.position.set(
+                Math.cos(angle) * (p.dpRadius + 0.4),
+                -p.hairHeight / 2 - 0.5,
+                Math.sin(angle) * (p.dpRadius + 0.4)
+            );
+            follicleGroup.add(receptor);
+        }
+
+        // === INTERVENTION MOLECULES ===
+        if (interventions.finasteride) {
+            // Add GREEN growth factors (DHT blocking - growth factors return)
+            for (let i = 0; i < 10; i++) {
+                const mol = createMolecule(0x48bb78, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'finasteride';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.minoxidil) {
+            // Add CYAN Wnt/β-Catenin (anagen extension)
+            for (let i = 0; i < 8; i++) {
+                const mol = createMolecule(0x4299e1, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'minoxidil';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.microneedling) {
+            // Add MORE GREEN (VEGF/FGF upregulation)
+            for (let i = 0; i < 10; i++) {
+                const mol = createMolecule(0x48bb78, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'microneedling';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.tretinoin) {
+            // Add YELLOW/GOLD (enzyme upregulation marker)
+            for (let i = 0; i < 8; i++) {
+                const mol = createMolecule(0xfbbf24, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'tretinoin';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+    }
+
+    // === BLOOD SUPPLY (glow effect at DP) ===
+    if (isHealthy) {
+        // Healthy: bright red glow effect on follicle base
+        const glowGeo = new THREE.SphereGeometry(1, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0xe85d5d,
+            transparent: true,
+            opacity: 0.2,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1.5, 1.5, 1.5);
+        follicleGroup.add(glow);
+    } else if (activeInterventions === 0) {
+        // DHT with no treatment: subtle dark glow (poor blood supply)
+        const glowGeo = new THREE.SphereGeometry(0.8, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0x333333,
+            transparent: true,
+            opacity: 0.15,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1.2, 1.2, 1.2);
+        follicleGroup.add(glow);
+    } else {
+        // Interventions applied: blood supply returning (red glow increases)
+        const glowGeo = new THREE.SphereGeometry(1, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0xe85d5d,
+            transparent: true,
+            opacity: 0.1 + activeInterventions * 0.1,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1 + activeInterventions * 0.2, 1 + activeInterventions * 0.2, 1 + activeInterventions * 0.2);
+        follicleGroup.add(glow);
+    }
+}
+
+function createMolecule(color, radius) {
+    const geo = new THREE.SphereGeometry(radius, 16, 16);
+    const mat = new THREE.MeshStandardMaterial({
+        color: color,
+        metalness: 0.8,
+        roughness: 0.2,
+        emissive: color,
+        emissiveIntensity: 0.3
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    return mesh;
+}
+
+function createCapillary(scale = 1.0) {
+    const geo = new THREE.CylinderGeometry(0.12 * scale, 0.12 * scale, 2.5, 8);
+    const mat = new THREE.MeshStandardMaterial({
+        color: 0xe85d5d,
+        metalness: 0.3,
+        roughness: 0.6,
+        emissive: 0xc53030,
+        emissiveIntensity: 0.2
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.castShadow = true;
+    return mesh;
+}
+
+function switchState(newState) {
+    currentState = newState;
+    createFollicle(newState);
+
+    // Update info
+    const descriptions = {
+        healthy: {
+            title: 'Normal Hair Growth (Anagen)',
+            text: 'Thick, pigmented hair shaft. Large dermal papilla. High growth factors (green). Pro-anagen signaling (cyan). Duration: 2-6 years. Good blood supply.'
+        },
+        dht: {
+            title: 'DHT-Induced Miniaturization',
+            text: 'Thin, unpigmented hair. Shrunken dermal papilla. High DHT (blue) and apoptotic factors (red). Androgen receptors active (orange). Duration: weeks-months. Poor blood supply.'
+        }
+    };
+
+    document.getElementById('state-title').textContent = descriptions[newState].title;
+    document.getElementById('state-description').textContent = descriptions[newState].text;
+
+    // Show interventions only for DHT state
+    const interventionsDiv = document.getElementById('interventions');
+    if (newState === 'dht') {
+        interventionsDiv.style.display = 'block';
+    } else {
+        interventionsDiv.style.display = 'none';
+        resetIntervention
+s();
+    }
+}
+
+function toggleIntervention(intervention, button) {
+    interventions[intervention] = !interventions[intervention];
+    button.classList.toggle('applied');
+    createFollicle('dht');
+
+    // Update info with treatment details
+    const treatmentInfo = {
+        finasteride: 'Blocks DHT synthesis. Removes the miniaturization signal. Green growth factors return.',
+        minoxidil: 'Extends anagen phase independently of DHT. Cyan pro-anagen signals increase.',
+        microneedling: 'Upregulates VEGF/FGF. More green growth factors appear.',
+        tretinoin: 'Upregulates enzyme activity. Additional growth factors and pro-anagen signals.'
+    };
+
+    const activeInterventions = Object.keys(interventions).filter(k => interventions[k]);
+    if (activeInterventions.length > 0) {
+        let infoText = 'Applied treatments: ';
+        infoText += activeInterventions.map(i => {
+            const names = {
+                finasteride: 'Finasteride',
+                minoxidil: 'Minoxidil',
+                microneedling: 'Microneedling',
+                tretinoin: 'Tretinoin'
+            };
+            return names[i];
+        }).join(', ');
+        infoText += '\n\n' + activeInterventions.map(i => treatmentInfo[i]).join('\n\n');
+        document.getElementById('state-description').textContent = infoText;
+    } else {
+        switchState('dht');
+    }
+}
+
+function resetInterventions() {
+    Object.keys(interventions).forEach(key => {
+        interventions[key] = false;
+    });
+    document.querySelectorAll('[data-intervention]').forEach(btn => {
+        btn.classList.remove('applied');
+    });
+}
+
+function resetAll() {
+    resetInterventions();
+    currentState = 'healthy';
+    document.querySelectorAll('[data-state]').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('[data-state="healthy"]').classList.add('active');
+    switchState('healthy');
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    
+    // Gentle rotation
+    follicleGroup.rotation.y += 0.002;
+    
+    renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+}
+
+// Initialize
+initThreeJS();
+</script>
 
         <h3>The Core Five Treatments (Ranked by Evidence Strength)</h3>
 
-        <div class="ranking-item">
-            <span class="ranking-number">1</span>
-            <div class="ranking-content">
-                <h4>Finasteride 1mg or Dutasteride 0.5mg (DHT Blockers)</h4>
-                <p><strong>How it works:</strong> Blocks the enzyme that converts testosterone to DHT (the hormone that shrinks hair follicles). Think of it like turning down the signal that's miniaturizing your hair.</p>
-                <p><strong>Efficacy:</strong> 80%+ halt progression; 40–50% see regrowth</p>
+        <div class="treatment-list">
+            <div class="treatment-item">
+                <h4><span class="treatment-number">1</span> Finasteride 1mg or Dutasteride 0.5mg (DHT Blockers)</h4>
+                <p><strong>How it works:</strong> Blocks the enzyme that converts testosterone to DHT (the hormone that shrinks sensitive hair follicles). Reduces DHT by ~60% in scalp and serum</p>
+                <p><strong>Efficacy:</strong> Stops hair loss in >95% of men; moderate regrowth in 66%; marked regrowth in 5%</p>
                 <p><strong>Timeline:</strong> 3–6 months initial effects; peak results at 12 months</p>
-                <p><strong>Cost:</strong> $10–30/month (generic finasteride is cheap)</p>
             </div>
-        </div>
 
-        <div class="ranking-item">
-            <span class="ranking-number">2</span>
-            <div class="ranking-content">
-                <h4>Minoxidil 5% Topical (or Oral)</h4>
+            <div class="treatment-item">
+                <h4><span class="treatment-number">2</span> Minoxidil 5% Topical (or Oral)</h4>
                 <p><strong>How it works:</strong> Extends the growth phase (anagen) of hair follicles and increases blood flow. It directly stimulates follicles to grow longer, thicker hair.</p>
-                <p><strong>Critical caveat:</strong> <span class="highlight">~40% of men are non-responders</span> due to low sulfotransferase enzyme activity in scalp follicles. These men convert very little minoxidil to its active form, so topical application doesn't help—no matter the concentration or frequency.</p>
+                <p><strong>Caveat:</strong> ~40% of men are non-responders due to low sulfotransferase enzyme activity in scalp follicles. These men convert very little minoxidil to its active form, so topical application doesn't help, regardless of the concentration or frequency.</p>
                 <p><strong>Efficacy (if you respond):</strong> 30–40% density increase</p>
-                <p><strong>Cost:</strong> $15–50/month</p>
+                
             </div>
-        </div>
 
-        <div class="ranking-item">
-            <span class="ranking-number">3</span>
-            <div class="ranking-content">
-                <h4>Tretinoin 0.1% Topical + Minoxidil (For Non-Responders)</h4>
+            <div class="treatment-item">
+                <h4><span class="treatment-number">3</span> Tretinoin 0.1% Topical + Minoxidil (For Non-Responders)</h4>
                 <p><strong>How it works:</strong> Tretinoin upregulates sulfotransferase enzyme expression in hair follicles, enabling minoxidil activation even in non-responders.</p>
-                <p><strong>This is the breakthrough for minoxidil non-responders:</strong> Research shows <strong>43% of minoxidil non-responders convert to responders</strong> after just 5 days of tretinoin application.</p>
+                <p>Protocol: Tretinoin 0.1% applied to affected areas 5x/week; minoxidil applied 1 hour after tretinoin</p>
+                <p>Research shows <strong>43% of minoxidil non-responders convert to responders</strong> after just 5 days of tretinoin application.</p>
                 <p><strong>Efficacy:</strong> Combined tretinoin + minoxidil shows 22–25% density increase vs. 8–12% for minoxidil alone</p>
-                <p><strong>Cost:</strong> $20–60/month combined</p>
+                <p>Note: Requires SPF 50+ daily use (photosensitivity from tretinoin)</p>
+                
             </div>
-        </div>
 
-        <div class="ranking-item">
-            <span class="ranking-number">4</span>
-            <div class="ranking-content">
-                <h4>Microneedling 0.6–1.0mm</h4>
-                <p><strong>How it works:</strong> Creates controlled micro-injuries that trigger healing, increase local blood flow, and upregulate growth factors. Dramatically increases topical drug absorption.</p>
-                <p><strong>Best used with:</strong> Minoxidil and/or tretinoin (amplifies their effect by 40–60%)</p>
+            <div class="treatment-item">
+                <h4><span class="treatment-number">4</span> Microneedling 0.6–1.0mm</h4>
+                <p><strong>How it works:</strong> Creates controlled micro-injuries that trigger healing, increase local blood flow, and upregulate growth factors. Also increases topical drug absorption.</p>
+                <p><strong>Best used with:</strong> Minoxidil and/or tretinoin (amplifies their effect by 40–60%) - make sure to wait 24hrs after microneedling to apply treatment!</p>
+                <p><strong>Size matters:</strong> 0.5mm is suboptimal; 0.6–1.0mm is evidence-based</p>
                 <p><strong>Efficacy:</strong> 20–30% density improvement when combined with minoxidil</p>
-                <p><strong>Cost:</strong> $0–300/session depending on at-home vs. professional</p>
-                <p><strong>Depth matters:</strong> 0.5mm is suboptimal; 0.6–1.0mm is evidence-based</p>
+                
             </div>
-        </div>
 
-        <div class="ranking-item">
-            <span class="ranking-number">5</span>
-            <div class="ranking-content">
-                <h4>Low-Level Laser Therapy (LLLT)</h4>
-                <p><strong>How it works:</strong> Red/near-infrared light stimulates mitochondrial ATP production in follicles, increasing cellular energy and prolonging anagen (growth phase).</p>
-                <p><strong>Efficacy:</strong> 35% hair growth increase vs. placebo (modest but real and safe)</p>
+            <div class="treatment-item">
+                <h4><span class="treatment-number">5</span> Low-Level Laser Therapy (LLLT)</h4>
+                <p><strong>How it works:</strong> Red/near-infrared light stimulates mitochondrial ATP (==energy) production in follicles, increasing cellular energy and prolonging anagen (growth phase).</p>
+                <p><strong>Efficacy:</strong> 35% hair growth increase vs. placebo (modest but safe and non pharmacological)</p>
                 <p><strong>Timeline:</strong> 12+ weeks for noticeable effect; 3–5x/week required</p>
-                <p><strong>Cost:</strong> $50–300/month (home devices cheaper than professional)</p>
+                
             </div>
         </div>
 
-        <div class="visual-block">
-            <h4>Efficacy Comparison: Single vs. Combined Therapy</h4>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Treatment Approach</th>
-                        <th>% Men Who Improve</th>
-                        <th>Average Hair Count Gain</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Finasteride alone</td>
-                        <td>81%</td>
-                        <td>+5.88 hairs/cm²</td>
-                    </tr>
-                    <tr>
-                        <td>Minoxidil alone</td>
-                        <td>59%</td>
-                        <td>+4–6 hairs/cm²</td>
-                    </tr>
-                    <tr>
-                        <td>Finasteride + Minoxidil</td>
-                        <td>94%</td>
-                        <td>+11–15 hairs/cm²</td>
-                    </tr>
-                    <tr style="background: #f0f3f4;">
-                        <td><strong>Finasteride + Minoxidil + Tretinoin + Microneedling</strong></td>
-                        <td><strong>94%+</strong></td>
-                        <td><strong>+15–25 hairs/cm²</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <h3>Efficacy Comparison: Single vs. Combined Therapy</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Treatment Approach</th>
+                    <th>% Men Who Improve</th>
+                    <th>Average Hair Count Gain</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Finasteride alone</td>
+                    <td>81%</td>
+                    <td>+5.88 hairs/cm²</td>
+                </tr>
+                <tr>
+                    <td>Minoxidil alone</td>
+                    <td>60%</td>
+                    <td>+4–6 hairs/cm²</td>
+                </tr>
+                <tr>
+                    <td>Finasteride + Minoxidil</td>
+                    <td>90%</td>
+                    <td>+11–15 hairs/cm²</td>
+                </tr>
+                <tr style="background: #f0f3f4;">
+                    <td><strong>Finasteride + Minoxidil + Tretinoin + Microneedling</strong></td>
+                    <td><strong>90%+</strong></td>
+                    <td><strong>+15–25 hairs/cm²</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+</body>
 
         <h3>Everything Else (What the Evidence Actually Says)</h3>
-        <div class="key-point">
-            <strong>Low/No Evidence:</strong> Biotin, saw palmetto, DHT-blocking shampoos, oils, supplements, scalp massages. These have <strong>no robust RCT evidence</strong>; cosmetic benefit only.
-        </div>
 
-        <div class="cards-grid">
-            <div class="card">
-                <h4>PRP (Platelet-Rich Plasma)</h4>
-                <p>Some evidence (30–40% density improvement); expensive ($200–500/session); viable adjunct but not standard first-line. Best used with finasteride + minoxidil.</p>
-            </div>
-            <div class="card">
-                <h4>Hair Transplant</h4>
-                <p>Works, but only if you stabilize underlying loss first (critical). Many men regret rushing into transplants without stabilizing.</p>
-            </div>
-            <div class="card">
-                <h4>Topical DHT Blockers</h4>
-                <p>Poor absorption; don't rely on them alone. Oral finasteride/dutasteride is superior.</p>
-            </div>
-            <div class="card">
-                <h4>JAK Inhibitors</h4>
-                <p>Promising for alopecia areata (autoimmune hair loss); NOT yet approved for male pattern baldness. Likely 3–5 years away from FDA approval.</p>
-            </div>
-        </div>
-    </section>
+        <p><strong>Low/No Evidence:</strong>  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Biotin,</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10648974/">saw palmetto</a>, DHT-blocking shampoos, oils, supplements, scalp massages. These have <strong>no robust RCT evidence</strong> as stand‑alone treatments for androgenetic alopecia; biotin only helps if you are actually deficient, which is <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">rare.</a>
 
-    <!-- SECTION 4: SEX LIFE -->
-    <section id="section-sex-life">
-        <h2>Will These Meds Wreck My Sex Life? (The Side Effects Question)</h2>
-        
-        <p style="font-size: 1.1em;"><strong>Honest answer: For some men, yes, but for most, no—and if it happens, it's usually reversible.</strong> Finasteride: 2–4% clinical trial incidence vs. 5–25% real-world reports; most resolve within weeks-months of stopping. It's a real consideration, but it's not automatic.</p>
+        <h4>PRP (Platelet-Rich Plasma)</h4>
+        <p>Multiple small RCTs and meta‑analyses show PRP can increase hair density and hair count versus baseline and sometimes versus placebo, with <a href="https://pubmed.ncbi.nlm.nih.gov/37533146/">typical gains</a> on the order of tens of hairs per cm² rather than dramatic regrowth, and with considerable<a href="https://www.frontiersin.org/articles/10.3389/fphar.2021.642980/full">protocol variability</a> expensive ($200–500/session); viable adjunct but not <a href="https://pubmed.ncbi.nlm.nih.gov/37533146/">standard first-line.</a> Best used with finasteride + minoxidil.</p>
 
-        <h3>Finasteride 1mg: The Detailed Side Effect Profile</h3>
+        <h4>Hair Transplant</h4>
+        <p>Modern FUT/FUE hair transplantation reliably relocates permanent donor hairs and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">can produce very natural results when performed by experienced surgeons</a>, but it does not stop ongoing androgenetic loss in native hairs.
+           You need to <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">stabilize underlying loss first</a>. Many men regret rushing into transplants without stabilizing.</p>
 
-        <div class="visual-block">
-            <h4>Finasteride Side Effects: Clinical Trials vs. Real-World Reports</h4>
-            <div class="placeholder-image">
-                [Dual bar chart | X-axis: side effect type (ED, decreased libido, ejaculatory dysfunction, gynecomastia) | Two bars per effect: "Clinical Trial %" vs. "Real-World Report %" | Show clinical in green (lower), real-world in orange (higher) | Include notes explaining discrepancy (nocebo effect, underreporting in trials)]
-            </div>
-            <p class="image-caption">Clinical trials show lower incidence, but real-world pharmacovigilance reports are higher. The gap is partly due to nocebo effect and publication bias.</p>
-        </div>
+        <h4>Topical DHT Blockers</h4>
+        <p>Poor absorption; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">don't rely on them alone</a> . Oral finasteride/dutasteride is <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">superior.</a></p>
 
-        <div class="key-point">
-            <strong>Side effect incidence (Finasteride 1mg):</strong>
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Erectile dysfunction:</strong> 2–4% (clinical) vs. 5–10% (real-world)</li>
-                <li><strong>Decreased libido:</strong> 1–3%</li>
-                <li><strong>Ejaculatory dysfunction:</strong> <1%</li>
-                <li><strong>Gynecomastia (breast tenderness):</strong> <1%</li>
-            </ul>
-        </div>
-
-        <h3>The Critical Question: Are Side Effects Permanent?</h3>
-        <p><strong>No. 90%+ of sexual side effects resolve within 1–6 months of stopping finasteride.</strong> This is the most important piece of data because men catastrophize about permanence. If you experience a genuine sexual side effect and stop the medication, your sexual function will almost certainly return to baseline.</p>
-
-        <div class="evidence-box">
-            <p><strong>Evidence:</strong> Post-finasteride syndrome (persistent sexual dysfunction after stopping) is reported anecdotally online but has no robust clinical evidence base. In clinical trials and long-term follow-up studies, sexual dysfunction reverses in 90%+ of men within months of discontinuation.</p>
-        </div>
-
-        <h3>The Nocebo Effect: Why Real-World Reports Are Higher</h3>
-        <p>Clinical trials show 2–4% incidence, but real-world reports (Reddit, forums, pharmacovigilance databases) show 5–25%. Why the gap?</p>
+        <h4>Natural Products with Wnt/β-catenin Targeting</h4>
+        <p>Many natural compounds show promise by targeting the Wnt/β-catenin signaling pathway (essential for hair regeneration).  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Yet preclinical/small short-term studies.</a>
         <ul>
-            <li><strong>Nocebo effect:</strong> Men anxious about sexual side effects are more likely to experience or perceive them. Reading horror stories before taking finasteride increases risk perception.</li>
-            <li><strong>Publication bias:</strong> Satisfied men don't post online; unhappy men do. Forums are not representative of the general population.</li>
-            <li><strong>Confirmation bias:</strong> Men on finasteride who experience any sexual change (completely normal variation) attribute it to the drug.</li>
-            <li><strong>Underreporting in trials:</strong> Some men are embarrassed to report sexual dysfunction to clinical staff in a controlled setting.</li>
+            <li><strong><a href="https://onlinelibrary.wiley.com/doi/10.1111/ics.12764">Watercress Extract (WCE):</a></strong> 2% lotion improved hair thickness/density in 6-month trial; decreases DKK1 (Wnt inhibitor), increases R-spondin 1 (Wnt agonist)</li>
+            <li><strong><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Ginkgo biloba Extract:</a></strong> Bioactive compounds (Ginkgolide B, bilobalide) promote growth by elevating β-catenin, diminishing DKK1</li>
+            <li><strong><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Red Ginseng Oil (RGO):</a></strong> Restored regenerative hair capacity in mouse models; induces early anagen, increases β-catenin and Shh/Gli-1</li>
+            <li><strong><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Polyphenols from Green Tea (EGCG):</a></strong> Selectively suppresses 5α-reductase activity; prevents DHT formation (complementary to finasteride)
+                <ul>
+                    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10173235/">Fisetin and Resveratrol </a> promote growth via β-catenin pathway stimulation</li>
+                </ul>
+            </li>
+            <li><strong>Topical Prostaglandin Analogues:</strong>
+                <ul>
+                    <li><a href="https://pubmed.ncbi.nlm.nih.gov/19365110/">Latanoprost (PGF2a analogue):</a> Increased hair density in 24-week trial</li>
+                    <li>Rationale: AGA scalp shows increased PGD2 (growth-inhibiting) and decreased PGE2 (growth-promoting)</li>
+                </ul>
+            </li>
+            <li><strong>Topical Valproic Acid (VPA):</strong>
+                <ul>
+                    <li><a href="https://pubmed.ncbi.nlm.nih.gov/25152365/">Increases β-catenin levels; clinical feasibility study showed increased total hair count</a></li>
+                    <li>Still experimental; not widely available</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+        <p>[add in a decision tree here.]</p>
+
+        <ul>
+            <li>Norwood&lt;3/4?
+                <ul>
+                    <li>yes → pharmacological and non-invasive treatments first
+                        <ul>
+                            <li>pharmacological or non invasive?
+                                <ul>
+                                    <li>non invasive
+                                        <ul>
+                                            <li>LLLT
+                                                <ul>
+                                                    <li>effective?
+                                                        <ul>
+                                                            <li>yes → continue</li>
+                                                            <li>no → add in microneedling
+                                                                <ul>
+                                                                    <li>effective?
+                                                                        <ul>
+                                                                            <li>yes → continue</li>
+                                                                            <li>no → consider adding some research-phase natural products (watercress extract, gingko bilboa extract, red ginseng oil, polyphenols from green tea, topical prostaglandin analogues, topical valproic acid)
+                                                                                <ul>
+                                                                                    <li>effective?
+                                                                                        <ul>
+                                                                                            <li>yes → continue</li>
+                                                                                            <li>no → consider pharmacological interventions, or shave it off</li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>pharmacological
+                                        <ul>
+                                            <li>minoxidil alone is effective?
+                                                <ul>
+                                                    <li>yes → continue just minoxidil</li>
+                                                    <li>no → add tretinoin
+                                                        <ul>
+                                                            <li>effective now?
+                                                                <ul>
+                                                                    <li>yes → continue</li>
+                                                                    <li>no → add finasteride
+                                                                        <ul>
+                                                                            <li>how about now?
+                                                                                <ul>
+                                                                                    <li>yes → continue</li>
+                                                                                    <li>no → add microneedling + LLLT
+                                                                                        <ul>
+                                                                                            <li>effective now?
+                                                                                                <ul>
+                                                                                                    <li>yes → continue</li>
+                                                                                                    <li>no → consider switching finasteride to dutasteride, or taking oral minoxidil instead</li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>no → surgical or shave it off</li>
+                </ul>
+            </li>
         </ul>
 
-        <p>The truth is somewhere in between: finasteride causes sexual side effects in some men, but the incidence is probably 5–10%, not 25%+.</p>
-
-        <h3>How to Minimize Risk</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li><strong>Start and stick:</strong> Don't obsess. Finasteride requires steady blood levels. Taking it inconsistently or stopping after 2–3 weeks is worse than consistent use.</li>
-                <li><strong>Give it 3–6 months:</strong> Many perceived side effects in week 2–4 resolve as your body adjusts. Don't assume it's permanent early on.</li>
-                <li><strong>If genuine side effect:</strong> Talk to your doctor. Options include dose adjustment, timing change (some men tolerate it better at night), or temporary cessation to confirm causation.</li>
-                <li><strong>Exit strategy:</strong> If you're experiencing a confirmed side effect after 6 months and it's affecting your quality of life, stop. Your sexual function will almost certainly return within weeks-months.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- SECTION 5: FOREVER -->
-    <section id="section-forever">
-        <h2>Do I Have to Take This Forever? (The Dependency Question)</h2>
+    <section id="sex-life">
+        <h2>Will These Meds Wreck My Sex Life? </h2>
         
-        <p style="font-size: 1.1em;"><strong>Yes. You have to continue indefinitely if you want to keep the benefits.</strong> Stop finasteride or minoxidil, and you lose hair at your "natural" rate within 3–6 months. This isn't addiction; it's because your underlying genetics don't change. Think of it like taking statins for cholesterol—you stop, your cholesterol goes back up.</p>
+        <p><strong>For some men, taking finasteride does lead to sexual dysfunction, but for most, no. And if it happens, it's usually reversible.</strong> Finasteride: 2–4% clinical trial incidence vs. 5–25% real-world reports; most resolve within weeks-months of stopping. It's a real consideration, but it's not automatic.</p>
 
-        <h3>What Happens When You Stop (Timeline)</h3>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>Week 1–4</h4>
-                <p>Nothing noticeable. Hair cycle takes time.</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Month 2–3</h4>
-                <p>Shedding resumption becomes apparent. You'll notice increased hairs in the shower or on your pillow.</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Month 3–6</h4>
-                <p>Back to baseline loss rate. Gains achieved over 12 months of treatment are lost within this window.</p>
-            </div>
-            <div class="timeline-item">
-                <h4>Month 6+</h4>
-                <p>Hairline and density revert to pre-treatment state over 12–24 months.</p>
-            </div>
+        <div class="visual-placeholder">
+            Dual bar chart | X-axis: side effect type (ED, decreased libido, ejaculatory dysfunction, gynecomastia) | Two bars per effect: "Clinical Trial %" vs. "Real-World Report %" | Show clinical in green (lower), real-world in orange (higher) | Include notes explaining discrepancy (nocebo effect, underreporting in trials)
         </div>
 
-        <h3>Why This Happens: The Genetics Don't Change</h3>
-        <p>Finasteride blocks DHT synthesis; minoxidil prolongs anagen; tretinoin upregulates enzymes. But none of these change your underlying genetic susceptibility to hair loss. They're interventions that require constant application to maintain their effect. Once you stop, your follicles revert to their natural state: miniaturized and short-cycled.</p>
+        <p><em>Clinical trials show lower incidence, but real-world pharmacovigilance reports are higher. The gap is partly due to nocebo effect and publication bias.</em></p>
 
-        <div class="key-point">
-            <strong>This is not a failure of the treatment.</strong> It's a reflection of how biology works. Your genes are constant; the medications counteract them. Stop the countermeasure, and the original problem returns.
-        </div>
+        <p><strong>Side effect incidence (Finasteride 1mg):</strong></p>
 
+        <ul>
+            <li><strong>Erectile dysfunction:</strong> 2–4% (clinical) vs. 5–10% (real-world)</li>
+            <li><strong>Decreased libido:</strong> 1–3%</li>
+            <li><strong>Ejaculatory dysfunction:</strong> &lt;1%</li>
+            <li><strong>Gynecomastia (breast tenderness):</strong> &lt;1%</li>
+        </ul>
+
+        <p>A lot of people on the internet (cough cough <a href="https://www.reddit.com/r/tressless/">Reddit</a>) catastrophise about the permanence of the <a href="https://www.pfsfoundation.org/about-pfs-post-finasteride-syndrome/">sexual side effects of finasteride or dutasteride.</a></p>
+
+ <p>So‑called “post‑finasteride syndrome” (persistent sexual dysfunction after stopping) is described <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7253896/">in case series and observational studies</a><a href="https://pubmed.ncbi.nlm.nih.gov/32033719/">but high‑quality, prospective, controlled evidence is limited</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/39953145/">its status as a distinct clinical entity remains debated.</a> In <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7253896/">randomized trials and long‑term follow‑up </a> of finasteride for hair loss and benign prostatic hyperplasia, most men who develop sexual side effects improve either on continued treatment or within months after discontinuation, with persistent dysfunction appearing uncommon,<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7231981/"> although exact long‑term percentages vary between studies.</a> Online reports are likely biased toward people whose symptoms have not resolved, while men who recover rarely post follow‑ups; at the same time, <a href="https://www.medsafe.govt.nz/profs/PUArticles/March2016/PostFinasterideSyndrome.htm">under‑reporting in trials</a> and routine care is possible because sexual problems can be <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7253896/">embarrassing to discuss with clinicians.</a> Biologically, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7253896/">finasteride works by</a> blocking 5‑alpha‑reductase and lowering dihydrotestosterone (DHT); after stopping the drug it is cleared and DHT levels usually return toward baseline, although some authors have proposed persistent changes in neurosteroids or androgen signalling in a susceptible subgroup,.<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7231981/"> which is still under investigation rather than firmly established</a></p> <p>The truth is probably somewhere in between: 5‑alpha‑reductase inhibitors cause sexual side effects in a minority of men (typically a few percentage points above placebo in clinical trials, not 25%+), most of which appear reversible over time, while a smaller group reports longer‑lasting symptoms for which true incidence and mechanisms are<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7231981/"> not yet clearly defined.</a>
         <h3>Cost-Benefit Calculation</h3>
-        <table class="comparison-table">
+
+        <table>
             <thead>
                 <tr>
                     <th>Option</th>
@@ -842,67 +1449,66 @@
                 </tr>
                 <tr>
                     <td><strong>Acceptance/shaving</strong></td>
-                    <td>$50–150 (razor)</td>
+                    <td>$50-100 a year (razor)</td>
                     <td>Intentional, clean look; no meds</td>
                     <td>Indefinite (but no medication burden)</td>
                 </tr>
             </tbody>
         </table>
 
-        <div class="callout">
-            <p><strong>Real talk:</strong> Finasteride is $10–30/month. That's the price of a coffee per day. Over 30 years, that's $3,600–10,800—less than a single transplant. The question isn't whether you can afford it; it's whether the psychological burden of "being on medication" is worth the benefit of halted loss and density improvement.</p>
-        </div>
+        <p>Cost of finasteride over 30 years is less than cost of hair transplant - and if you get hair transplant you would have to pay for meds as well. question is less about cost of medication and more about your tolerance of the psychological burden of "being on medication"</p>
     </section>
 
-    <!-- SECTION 6: TRANSPLANT -->
-    <section id="section-transplant">
-        <h2>How Do I Avoid a Botched Hair Transplant? (The Surgery Question)</h2>
+    
+    <section id="transplant">
+        <h2>How Do I Avoid a Botched Hair Transplant?</h2>
         
-        <p style="font-size: 1.1em;"><strong>Bad transplants happen because men rush into surgery before stabilizing underlying loss, choose cheap clinics, or don't manage expectations.</strong> If you're considering transplant, you need to be on finasteride/dutasteride first, choose a surgeon who won't over-harvest, and accept that you're supplementing—not replacing—medical therapy.</p>
+        <p><strong>Bad transplants happen because men rush into surgery before stabilising underlying loss, choose cheap clinics, or don't manage expectations.</strong> If you're considering transplant, you need to be on finasteride/dutasteride first, choose a surgeon who won't over-harvest, and accept that you're supplementing medical therapy (not replacing it!).</p>
 
         <h3>Before You Even Consider Surgery: The Golden Rule</h3>
-        <div class="callout">
-            <p><strong>Stabilize your loss first (minimum 6–12 months on finasteride ± minoxidil) before any transplant.</strong> A transplant at Norwood 3 that keeps receding looks progressively worse. You need to know your "final" loss pattern before you graft hair into it.</p>
-        </div>
+
+        <p><strong>Stabilize your loss first (minimum 6–12 months on finasteride ± minoxidil) before any transplant.</strong> A transplant at Norwood 3 that keeps receding looks progressively worse. You need to know your "final" loss pattern before you graft hair into it.</p>
     </section>
 
-    <!-- SECTION 7: SHAVE -->
-    <section id="section-shave">
-        <h2>When Is It Smarter to Just Shave? (The Acceptance Question)</h2>
+   
+    <section id="shave">
+        <h2>When Is It Smarter to Just Shave? </h2>
         
-        <p style="font-size: 1.1em;"><strong>Shaving is underrated. Men report feeling more confident and in control after committing to it.</strong> But it's not for everyone—it requires owning your look, accepting age, and not viewing it as "giving up."</p>
+        <p><strong>Shaving is underrated. Men report feeling more confident and in control after committing to it.</strong> But it requires owning your look, accepting age, and not viewing it as "giving up."</p>
 
         <h3>Signs You Might Be Ready to Shave</h3>
-        <div class="key-point">
-            <ul style="margin: 10px 0 0 20px;">
-                <li>You're spending more time/money/emotional energy on hair than comfortable with</li>
-                <li>You're Norwood 5+ and medical therapy is yielding modest results</li>
-                <li>You're considering surgery but feel ambivalent about it (hedging is exhausting)</li>
-                <li>Your hairline loss bothers you more than the hair loss itself (you'd feel better with control)</li>
-                <li>You've been on finasteride for 12+ months and it's not meeting your expectations</li>
-                <li>You're in your 50s+ and want to stop daily medications</li>
-            </ul>
-        </div>
+
+        <ul>
+            <li>You're spending more time/money/emotional energy on hair than comfortable with</li>
+            <li>You're Norwood 5+ and medical therapy is yielding modest results</li>
+            <li>You're considering surgery but feel ambivalent about it (hedging is exhausting)</li>
+            <li>Your hairline loss bothers you more than the hair loss itself (you'd feel better with control)</li>
+            <li>You've been on finasteride for 12+ months and it's not meeting your expectations</li>
+            <li>You're in your 50s+ and want to stop daily medications</li>
+        </ul>
     </section>
 
-    <!-- CONCLUSION -->
-    <section id="conclusion">
-        <h2>Final Thoughts: The Framework</h2>
+    <section id="final-thoughts">
+        <h2>Final Thoughts</h2>
         
-        <p>Male pattern baldness is not a death sentence. It's a genetic predisposition that you can slow, halt, and modestly reverse with evidence-based interventions. The window for action is largest in your 30s and 40s, but 50+ is not "too late." The key is:</p>
+        <p>Male is a genetic predisposition that you can slow, halt, and modestly reverse with evidence-based interventions. The window for action is largest in your 30s and 40s, but 50+ is not "too late." The key is:</p>
 
         <ul>
             <li><strong>Know your starting point:</strong> Use the Norwood scale and photography to track objectively</li>
             <li><strong>Start early, but don't panic:</strong> 6–12 months of medical therapy before judging efficacy</li>
             <li><strong>Combination beats single therapy:</strong> Finasteride + minoxidil + tretinoin + microneedling = 94% improvement vs. 59–81% alone</li>
-            <li><strong>Manage expectations:</strong> You're aiming for stabilization + modest density improvement, not teenage hairline restoration (unless surgery)</li>
+            <li><strong>Manage expectations:</strong> You're aiming for stabilization + modest density improvement. You won't get your teenage hair back.</li>
             <li><strong>Accept the timeline:</strong> Peak results at 12 months; shedding phase (weeks 6–12) is psychologically hard but biologically necessary</li>
             <li><strong>Have an exit strategy:</strong> If medications don't work, surgery is an option (with caveats). If you're tired of treatment, shaving is valid.</li>
             <li><strong>Commit or don't:</strong> Indefinite treatment is required. If you can't stomach that, accept the baldness or explore alternatives.</li>
         </ul>
 
-        <p style="margin-top: 40px; font-size: 1.1em;"><strong>The bottom line:</strong> You have more control than you think. Start now, be patient, and reassess at month 12. Most men who start at your stage and stick with the full protocol see meaningful improvement. Regret usually comes from not starting, or starting and quitting too early.</p>
+        <p>At the end of the day, you have more control than you think. Start now, be patient, and reassess at month 12. Most men who start at your stage and stick with the full protocol see meaningful improvement. Regret usually comes from not starting, or starting and quitting too early.</p>
     </section>
+
+    <div class="disclaimer">
+        <strong>Medical Disclaimer:</strong> This article is educational and does not constitute medical advice. Hair loss treatment should be discussed with a qualified healthcare provider. Individual responses to medications vary. Finasteride, minoxidil, tretinoin, and other treatments carry potential side effects and contraindications. Consult your doctor before starting any regimen, especially if you have pre-existing health conditions.
+    </div>
 
 </div>
 
