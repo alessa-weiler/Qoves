@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Follicle Biology Interactive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0f1419;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #a0aec0;
+            font-size: 1.1em;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        #canvas-container {
+            background: linear-gradient(135deg, #1a1f3a 0%, #16213e 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 700px;
+            position: relative;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .controls-panel {
+            background: linear-gradient(135deg, #1a1f3a 0%, #16213e 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 25px;
+            max-height: 700px;
+            overflow-y: auto;
+        }
+
+        .controls-panel h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .state-tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-button {
+            padding: 12px;
+            border: 2px solid #667eea;
+            background: transparent;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .tab-button:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .interventions {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #667eea;
+        }
+
+        .interventions h3 {
+            color: #48bb78;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .intervention-button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid #48bb78;
+            background: transparent;
+            color: #48bb78;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .intervention-button:hover {
+            background: rgba(72, 187, 120, 0.2);
+            transform: translateX(5px);
+        }
+
+        .intervention-button.applied {
+            background: #48bb78;
+            color: #0f1419;
+        }
+
+        .state-info {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 3px solid #667eea;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .state-info h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .molecule-legend {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 3px solid #667eea;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.85em;
+        }
+
+        .molecule-legend h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .molecule-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .molecule-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .reset-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: 2px solid #f56565;
+            background: transparent;
+            color: #f56565;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .reset-button:hover {
+            background: rgba(245, 101, 101, 0.2);
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            #canvas-container {
+                height: 500px;
+            }
+
+            .controls-panel {
+                max-height: none;
+            }
+        }
+
+        .disclaimer {
+            background: rgba(245, 101, 101, 0.1);
+            border-left: 3px solid #f56565;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #cbd5e0;
+        }
+
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #667eea;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Hair Follicle Biology: Interactive Visualization</h1>
+        <p class="subtitle">Normal Hair Growth vs. DHT-Induced Miniaturization with Treatment Effects</p>
+    </header>
+
+    <div class="content">
+        <div id="canvas-container">
+            <div class="loading-text">Loading visualization...</div>
+        </div>
+
+        <div class="controls-panel">
+            <h2>Hair Follicle States</h2>
+
+            <div class="state-tabs">
+                <button class="tab-button active" data-state="healthy">Normal Growth</button>
+                <button class="tab-button" data-state="dht">DHT Miniaturized</button>
+            </div>
+
+            <div class="state-info">
+                <h4 id="state-title">Normal Hair Growth (Anagen)</h4>
+                <div id="state-description"></div>
+            </div>
+
+            <div class="molecule-legend">
+                <h4>Molecular Actors</h4>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #667eea;"></div>
+                    <span><strong>DHT:</strong> Hormone signal</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #48bb78;"></div>
+                    <span><strong>Growth Factors:</strong> Pro-anagen</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #f56565;"></div>
+                    <span><strong>Apoptotic:</strong> Pro-death signals</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #ed8936;"></div>
+                    <span><strong>Androgen Receptor:</strong> DHT receptor</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #4299e1;"></div>
+                    <span><strong>Wnt/β-Catenin:</strong> Anagen signal</span>
+                </div>
+                <div class="molecule-item">
+                    <div class="molecule-dot" style="background: #fbbf24;"></div>
+                    <span><strong>Tretinoin Effect:</strong> Enzyme upregulation</span>
+                </div>
+                <div class="molecule-item">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; background: radial-gradient(circle, rgba(232,93,93,0.3) 0%, transparent 70%);"></div>
+                    <span><strong>Red Glow:</strong> Blood supply around DP</span>
+                </div>
+            </div>
+
+            <div class="interventions" id="interventions" style="display: none;">
+                <h3>Add Interventions (DHT State Only)</h3>
+                <button class="intervention-button" data-intervention="finasteride">+ Finasteride (Block DHT)</button>
+                <button class="intervention-button" data-intervention="minoxidil">+ Minoxidil (Extend Anagen)</button>
+                <button class="intervention-button" data-intervention="microneedling">+ Microneedling (↑ Growth Factors)</button>
+                <button class="intervention-button" data-intervention="tretinoin">+ Tretinoin (↑ Enzyme Activity)</button>
+            </div>
+
+            <div class="disclaimer">
+                <strong>Note:</strong> This visualization shows molecular mechanisms in simplified form. Real hair biology is more complex, but these pathways are evidence-based.
+            </div>
+
+            <button class="reset-button" id="reset-button">Reset All</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// ===== THREE.JS SETUP =====
+const canvas = document.getElementById('canvas-container');
+let scene, camera, renderer;
+let currentState = 'healthy';
+let interventions = {
+    finasteride: false,
+    minoxidil: false,
+    microneedling: false,
+    tretinoin: false
+};
+let follicleGroup;
+
+function initThreeJS() {
+    // Scene
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0f1419);
+    scene.fog = new THREE.Fog(0x0f1419, 100, 500);
+
+    // Camera
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    camera.position.z = 8;
+
+    // Renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+    
+    // Clear loading text
+    canvas.textContent = '';
+    canvas.appendChild(renderer.domElement);
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+
+    const pointLight1 = new THREE.PointLight(0x667eea, 1, 100);
+    pointLight1.position.set(5, 5, 10);
+    pointLight1.castShadow = true;
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0x764ba2, 0.8, 100);
+    pointLight2.position.set(-5, -5, 10);
+    scene.add(pointLight2);
+
+    // Follicle group
+    follicleGroup = new THREE.Group();
+    scene.add(follicleGroup);
+
+    // Create initial follicle
+    createFollicle('healthy');
+
+    // Event listeners
+    document.querySelectorAll('[data-state]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            switchState(e.target.dataset.state);
+            document.querySelectorAll('[data-state]').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('[data-intervention]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            toggleIntervention(e.target.dataset.intervention, e.target);
+        });
+    });
+
+    document.getElementById('reset-button').addEventListener('click', resetAll);
+
+    window.addEventListener('resize', onWindowResize);
+
+    animate();
+}
+
+function createFollicle(state) {
+    // Clear existing
+    while (follicleGroup.children.length > 0) {
+        follicleGroup.remove(follicleGroup.children[0]);
+    }
+
+    const isHealthy = state === 'healthy';
+    
+    // Calculate intervention effects
+    const activeInterventions = Object.values(interventions).filter(v => v).length;
+    
+    const params = {
+        healthy: {
+            dpRadius: 0.7,
+            hairRadius: 0.4,
+            hairHeight: 6,
+            color: 0x2c3e50,
+            dpColor: 0xed8936,
+            wallColor: 0x4a5568
+        },
+        dht: {
+            dpRadius: 0.35,
+            hairRadius: 0.15,
+            hairHeight: 2,
+            color: 0x5a5a5a,
+            dpColor: 0xd69e8c,
+            wallColor: 0x4a5568
+        }
+    };
+
+    let p = isHealthy ? params.healthy : params.dht;
+
+    // === SCALE UP FOLLICLE WITH INTERVENTIONS ===
+    if (!isHealthy && activeInterventions > 0) {
+        // Gradually restore toward healthy size based on intervention count
+        const recoveryFactor = activeInterventions * 0.15; // 0.15 per intervention
+        p.dpRadius = 0.35 + (0.35 * recoveryFactor);
+        p.hairRadius = 0.15 + (0.25 * recoveryFactor);
+        p.hairHeight = 2 + (4 * recoveryFactor);
+    }
+
+    // === DERMAL PAPILLA ===
+    const dpGeo = new THREE.SphereGeometry(p.dpRadius, 32, 32);
+    const dpEmissive = activeInterventions > 0 && !isHealthy ? 0x48bb78 : p.dpColor;
+    const dpMat = new THREE.MeshStandardMaterial({
+        color: p.dpColor,
+        metalness: 0.4,
+        roughness: 0.6,
+        emissive: dpEmissive,
+        emissiveIntensity: activeInterventions > 0 && !isHealthy ? 0.6 : 0.3
+    });
+    const dp = new THREE.Mesh(dpGeo, dpMat);
+    dp.position.y = -p.hairHeight / 2 - 0.5;
+    dp.castShadow = true;
+    dp.receiveShadow = true;
+    follicleGroup.add(dp);
+
+    // === HAIR MATRIX ===
+    const matrixGeo = new THREE.CylinderGeometry(p.hairRadius * 1.4, p.dpRadius * 0.8, 0.8, 16);
+    const matrixMat = new THREE.MeshStandardMaterial({
+        color: 0x9f7aea,
+        metalness: 0.2,
+        roughness: 0.7
+    });
+    const matrix = new THREE.Mesh(matrixGeo, matrixMat);
+    matrix.position.y = -p.hairHeight / 2 + 0.5;
+    matrix.castShadow = true;
+    follicleGroup.add(matrix);
+
+    // === HAIR SHAFT ===
+    const hairGeo = new THREE.CylinderGeometry(p.hairRadius, p.hairRadius, p.hairHeight, 16);
+    const hairMat = new THREE.MeshStandardMaterial({
+        color: p.color,
+        metalness: 0.3,
+        roughness: 0.7
+    });
+    const hair = new THREE.Mesh(hairGeo, hairMat);
+    hair.position.y = 0;
+    hair.castShadow = true;
+    hair.receiveShadow = true;
+    follicleGroup.add(hair);
+
+    // === FOLLICLE WALL ===
+    const wallGeo = new THREE.CylinderGeometry(p.hairRadius * 2.5, p.hairRadius * 2.8, p.hairHeight + 2, 20);
+    const wallMat = new THREE.MeshStandardMaterial({
+        color: p.wallColor,
+        metalness: 0.1,
+        roughness: 0.8,
+        side: THREE.BackSide
+    });
+    const wall = new THREE.Mesh(wallGeo, wallMat);
+    follicleGroup.add(wall);
+
+    // === MOLECULES ===
+    if (isHealthy) {
+        // Growth factors (green) - MANY
+        for (let i = 0; i < 15; i++) {
+            const mol = createMolecule(0x48bb78, 0.22);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 4 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Wnt/β-Catenin (cyan) - MANY
+        for (let i = 0; i < 10; i++) {
+            const mol = createMolecule(0x4299e1, 0.2);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 4 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+    } else {
+        // DHT molecules (blue) - baseline
+        const dhtCount = Math.max(3, 10 - activeInterventions * 2);
+        for (let i = 0; i < dhtCount; i++) {
+            const mol = createMolecule(0x667eea, 0.2);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 2 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Apoptotic factors (red) - REDUCED with interventions
+        const apopCount = Math.max(1, 8 - activeInterventions * 2);
+        for (let i = 0; i < apopCount; i++) {
+            const mol = createMolecule(0xf56565, 0.18);
+            mol.position.set(
+                (Math.random() - 0.5) * 3,
+                (Math.random() - 0.5) * 2 - 1,
+                (Math.random() - 0.5) * 2
+            );
+            follicleGroup.add(mol);
+        }
+
+        // Androgen receptors on DP (orange)
+        for (let i = 0; i < 6; i++) {
+            const angle = (i / 6) * Math.PI * 2;
+            const receptor = createMolecule(0xed8936, 0.15);
+            receptor.position.set(
+                Math.cos(angle) * (p.dpRadius + 0.4),
+                -p.hairHeight / 2 - 0.5,
+                Math.sin(angle) * (p.dpRadius + 0.4)
+            );
+            follicleGroup.add(receptor);
+        }
+
+        // === INTERVENTION MOLECULES ===
+        if (interventions.finasteride) {
+            // Add GREEN growth factors (DHT blocking - growth factors return)
+            for (let i = 0; i < 10; i++) {
+                const mol = createMolecule(0x48bb78, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'finasteride';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.minoxidil) {
+            // Add CYAN Wnt/β-Catenin (anagen extension)
+            for (let i = 0; i < 8; i++) {
+                const mol = createMolecule(0x4299e1, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'minoxidil';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.microneedling) {
+            // Add MORE GREEN (VEGF/FGF upregulation)
+            for (let i = 0; i < 10; i++) {
+                const mol = createMolecule(0x48bb78, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'microneedling';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+
+        if (interventions.tretinoin) {
+            // Add YELLOW/GOLD (enzyme upregulation marker)
+            for (let i = 0; i < 8; i++) {
+                const mol = createMolecule(0xfbbf24, 0.2);
+                mol.position.set(
+                    (Math.random() - 0.5) * 3,
+                    (Math.random() - 0.5) * 2 - 1,
+                    (Math.random() - 0.5) * 2
+                );
+                mol.userData.intervention = 'tretinoin';
+                mol.userData.pulse = Math.random();
+                follicleGroup.add(mol);
+            }
+        }
+    }
+
+    // === BLOOD SUPPLY (glow effect at DP) ===
+    if (isHealthy) {
+        // Healthy: bright red glow effect on follicle base
+        const glowGeo = new THREE.SphereGeometry(1, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0xe85d5d,
+            transparent: true,
+            opacity: 0.2,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1.5, 1.5, 1.5);
+        follicleGroup.add(glow);
+    } else if (activeInterventions === 0) {
+        // DHT with no treatment: subtle dark glow (poor blood supply)
+        const glowGeo = new THREE.SphereGeometry(0.8, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0x333333,
+            transparent: true,
+            opacity: 0.15,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1.2, 1.2, 1.2);
+        follicleGroup.add(glow);
+    } else {
+        // Interventions applied: blood supply returning (red glow increases)
+        const glowGeo = new THREE.SphereGeometry(1, 32, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0xe85d5d,
+            transparent: true,
+            opacity: 0.1 + activeInterventions * 0.1,
+            fog: false
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        glow.position.y = -p.hairHeight / 2 - 0.5;
+        glow.scale.set(1 + activeInterventions * 0.2, 1 + activeInterventions * 0.2, 1 + activeInterventions * 0.2);
+        follicleGroup.add(glow);
+    }
+}
+
+function createMolecule(color, radius) {
+    const geo = new THREE.SphereGeometry(radius, 16, 16);
+    const mat = new THREE.MeshStandardMaterial({
+        color: color,
+        metalness: 0.8,
+        roughness: 0.2,
+        emissive: color,
+        emissiveIntensity: 0.3
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    return mesh;
+}
+
+function createCapillary(scale = 1.0) {
+    const geo = new THREE.CylinderGeometry(0.12 * scale, 0.12 * scale, 2.5, 8);
+    const mat = new THREE.MeshStandardMaterial({
+        color: 0xe85d5d,
+        metalness: 0.3,
+        roughness: 0.6,
+        emissive: 0xc53030,
+        emissiveIntensity: 0.2
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.castShadow = true;
+    return mesh;
+}
+
+function switchState(newState) {
+    currentState = newState;
+    createFollicle(newState);
+
+    // Update info
+    const descriptions = {
+        healthy: {
+            title: 'Normal Hair Growth (Anagen)',
+            text: 'Thick, pigmented hair shaft. Large dermal papilla. High growth factors (green). Pro-anagen signaling (cyan). Duration: 2-6 years. Good blood supply.'
+        },
+        dht: {
+            title: 'DHT-Induced Miniaturization',
+            text: 'Thin, unpigmented hair. Shrunken dermal papilla. High DHT (blue) and apoptotic factors (red). Androgen receptors active (orange). Duration: weeks-months. Poor blood supply.'
+        }
+    };
+
+    document.getElementById('state-title').textContent = descriptions[newState].title;
+    document.getElementById('state-description').textContent = descriptions[newState].text;
+
+    // Show interventions only for DHT state
+    const interventionsDiv = document.getElementById('interventions');
+    if (newState === 'dht') {
+        interventionsDiv.style.display = 'block';
+    } else {
+        interventionsDiv.style.display = 'none';
+        resetIntervention
+s();
+    }
+}
+
+function toggleIntervention(intervention, button) {
+    interventions[intervention] = !interventions[intervention];
+    button.classList.toggle('applied');
+    createFollicle('dht');
+
+    // Update info with treatment details
+    const treatmentInfo = {
+        finasteride: 'Blocks DHT synthesis. Removes the miniaturization signal. Green growth factors return.',
+        minoxidil: 'Extends anagen phase independently of DHT. Cyan pro-anagen signals increase.',
+        microneedling: 'Upregulates VEGF/FGF. More green growth factors appear.',
+        tretinoin: 'Upregulates enzyme activity. Additional growth factors and pro-anagen signals.'
+    };
+
+    const activeInterventions = Object.keys(interventions).filter(k => interventions[k]);
+    if (activeInterventions.length > 0) {
+        let infoText = 'Applied treatments: ';
+        infoText += activeInterventions.map(i => {
+            const names = {
+                finasteride: 'Finasteride',
+                minoxidil: 'Minoxidil',
+                microneedling: 'Microneedling',
+                tretinoin: 'Tretinoin'
+            };
+            return names[i];
+        }).join(', ');
+        infoText += '\n\n' + activeInterventions.map(i => treatmentInfo[i]).join('\n\n');
+        document.getElementById('state-description').textContent = infoText;
+    } else {
+        switchState('dht');
+    }
+}
+
+function resetInterventions() {
+    Object.keys(interventions).forEach(key => {
+        interventions[key] = false;
+    });
+    document.querySelectorAll('[data-intervention]').forEach(btn => {
+        btn.classList.remove('applied');
+    });
+}
+
+function resetAll() {
+    resetInterventions();
+    currentState = 'healthy';
+    document.querySelectorAll('[data-state]').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('[data-state="healthy"]').classList.add('active');
+    switchState('healthy');
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    
+    // Gentle rotation
+    follicleGroup.rotation.y += 0.002;
+    
+    renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+}
+
+// Initialize
+initThreeJS();
+</script>
+
+</body>
+</html>
