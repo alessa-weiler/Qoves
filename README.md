@@ -19,10 +19,4 @@ An interactive 3D-ish visualization showing how hair follicles work through thei
 
 Just open any of the HTML files in your browser. The visualization works best in Chrome or Firefox.
 
-## The Goal
-
-The project demonstrates how to take complex medical/scientific information and present it in multiple formats for different audiences—from clinical professionals to curious readers to visual learners.
-
 ---
-
-*Project completed as part of an interview process.*
